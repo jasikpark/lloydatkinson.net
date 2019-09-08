@@ -7,8 +7,7 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "gridsome": "^0.6.0",
-    "typeface-raleway": "^0.0.75"
+    "gridsome": "^0.6.0"
   },
   "devDependencies": {
     "gridsome-plugin-tailwindcss": "^2.2.24"
