@@ -1,9 +1,9 @@
 <template>
   <div class="border-t-4 border-red-600 container mx-auto">
     <header>
-      {{ $static.metaData.siteName }}
+      <!-- {{ $static.metaData.siteName }} -->
+      <navigation-bar />
     </header>
-    <nav>Navigation</nav>
     <main>
       <slot />
     </main>
@@ -17,6 +17,16 @@ query {
   }
 }
 </static-query>
+
+<script>
+import NavigationBar from '~/components/navigation-bar.vue';
+
+export default {
+  components: {
+    NavigationBar
+  }
+}
+</script>
 
 <style>
 /* body {
