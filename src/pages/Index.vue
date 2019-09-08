@@ -1,6 +1,5 @@
 <template>
   <Layout>
-    
     <!-- Learn how to use images here: https://gridsome.org/docs/images
     <g-image alt="Example image" src="~/favicon.png" width="135" />
     
@@ -13,23 +12,27 @@
     <p class="home-links">
       <a href="https://gridsome.org/docs" target="_blank" rel="noopener">Gridsome Docs</a>
       <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p> -->
+    </p>-->
 
-    Hey Gabi, I love you, feel better soon <span class="text-xl">💖</span>
+    <!-- <h1 class="text-4xl">Hey</h1>
+    <p>Not much here right now.</p> -->
 
+    <div class="mt-16 text-center align-middle justify-center">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-4xl font-light leading-tight">
+            Hi there, I'm Lloyd.
+        </h1>
+        <h2 class="text-2xl sm:text-4xl md:text-4xl xl:text-2xl font-light leading-tight">
+            I make things.
+        </h2>
+
+    </div>
   </Layout>
 </template>
 
 <script>
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: "Lloyd Atkinson - Developer & Maker"
   }
-}
+};
 </script>
-
-<style>
-.home-links a {
-  margin-right: 1rem;
-}
-</style>

@@ -11,14 +11,14 @@
       </div>
       <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
         <div class="text-sm lg:flex-grow">
-          <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-red-500 mr-4">
-            Docs
+          <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-red-500 mr-4">
+            Posts
           </a>
-          <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-red-500 mr-4">
-            Examples
+          <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-red-500 mr-4">
+            Projects
           </a>
-          <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-red-500">
-            Blog
+          <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-red-500">
+            About
           </a>
         </div>
         <div>
