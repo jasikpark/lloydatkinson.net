@@ -45,7 +45,7 @@
 <script>
 export default {
   metaInfo: {
-    title: "Lloyd Atkinson - Developer & Maker"
+    title: "Lloyd Atkinson - Software Developer & Maker"
   }
 };
 </script>
