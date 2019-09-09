@@ -18,14 +18,27 @@
     <p>Not much here right now.</p> -->
 
     <div class="mt-16 text-center align-middle justify-center">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-4xl font-light leading-tight">
+        <!-- <h1 class="text-5xl sm:text-4xl md:text-5xl xl:text-4xl font-light leading-tight">
+            Hi there, I'm Lloyd. -->
+        <!-- </h1> -->
+        <h1 class="text-4xl sm:text-6xl font-light leading-tight">
             Hi there, I'm Lloyd.
         </h1>
-        <h2 class="text-2xl sm:text-4xl md:text-4xl xl:text-2xl font-light leading-tight">
+        <h2 class="text-3xl sm:text-5xl font-light leading-tight">
             I make things.
         </h2>
-
+        <!-- <h2 class="text-2xl sm:text-4xl md:text-4xl xl:text-2xl font-light leading-tight">
+            I make things.
+        </h2> -->
     </div>
+
+    <!-- <div class="bg-gray-300 mt-16">
+      <p class="xl:text-purple-600">XL</p>
+      <p class="lg:text-purple-600">LG</p>
+      <p class="md:text-purple-600">MD</p>
+      <p class="sm:text-purple-600">SM</p>
+      <p class="text-purple-600">Normal</p>
+    </div> -->
   </Layout>
 </template>
 
