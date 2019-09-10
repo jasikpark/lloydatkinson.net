@@ -45,7 +45,7 @@
         </h2> -->
 
         <font-awesome :icon="['fab', 'github']" size="10x" />
-<font-awesome :icon="['fab', 'twitter']"/>
+        <font-awesome :icon="['fab', 'twitter']"/>
     </div>
 
     <!-- <div class="bg-gray-300 mt-16">
