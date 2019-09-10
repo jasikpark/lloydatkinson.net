@@ -5,7 +5,7 @@
             <span class="font-semibold text-xl tracking-tight">Lloyd Atkinson</span>
         </div>
         <div class="block lg:hidden">
-            <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+            <button class="flex items-center px-3 py-2 border rounded text-red-vibrant border-red-vibrant hover:text-red-600 hover:border-red-600">
                 <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
             </button>
         </div>
@@ -21,12 +21,12 @@
                     About
                 </a>
             </div>
-            <div>
+            <div class="">
                 <a href="https://github.com/lloydjatkinson">
-                    <font-awesome class="mr-5 text-gray-700 hover:text-red-600 svg-inline--fa fa-github fa-w-16 fa-lg" :icon="['fab', 'github']" size="lg" />
+                    <font-awesome class="mr-5 text-gray-800 hover:text-red-600 svg-inline--fa fa-github fa-w-16 fa-lg" :icon="['fab', 'github']" />
                 </a>
                 <a href="https://github.com/lloydjatkinson">
-                    <font-awesome class="text-gray-700 hover:text-red-600 svg-inline--fa fa-github fa-w-16 fa-lg" :icon="['far', 'envelope']" size="lg" />
+                    <font-awesome class="text-gray-800 hover:text-red-600 svg-inline--fa fa-github fa-w-16 fa-lg" :icon="['far', 'envelope']" />
                 </a>
             </div>
             <!-- <div>

@@ -43,9 +43,6 @@
         <!-- <h2 class="text-2xl sm:text-4xl md:text-4xl xl:text-2xl font-light leading-tight">
             I make things.
         </h2> -->
-
-        <font-awesome class="svg-inline--fa fa-github fa-w-16 fa-2x" :icon="['fab', 'github']" />
-        <font-awesome :icon="['fab', 'twitter']"/>
     </div>
 
     <!-- <div class="bg-gray-300 mt-16">
