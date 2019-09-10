@@ -22,12 +22,12 @@
                 </a>
             </div>
             <div>
-                <!--<a href="https://github.com/lloydjatkinson">
-                    <font-awesome class="mr-5 text-gray-700 hover:text-red-600" :icon="['fab', 'github']" size="lg" />
+                <a href="https://github.com/lloydjatkinson">
+                    <font-awesome class="mr-5 text-gray-700 hover:text-red-600 svg-inline--fa fa-github fa-w-16 fa-lg" :icon="['fab', 'github']" size="lg" />
                 </a>
                 <a href="https://github.com/lloydjatkinson">
-                    <font-awesome class="text-gray-700 hover:text-red-600" :icon="['far', 'envelope']" size="lg" />
-                </a>-->
+                    <font-awesome class="text-gray-700 hover:text-red-600 svg-inline--fa fa-github fa-w-16 fa-lg" :icon="['far', 'envelope']" size="lg" />
+                </a>
             </div>
             <!-- <div>
               <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a>
