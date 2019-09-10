@@ -44,7 +44,7 @@
             I make things.
         </h2> -->
 
-        <font-awesome :icon="['fab', 'github']" size="10x" />
+        <font-awesome class="svg-inline--fa fa-github fa-w-16 fa-10x" :icon="['fab', 'github']" size="10x" />
         <font-awesome :icon="['fab', 'twitter']"/>
     </div>
 
