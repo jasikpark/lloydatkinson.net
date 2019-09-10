@@ -15,9 +15,9 @@ library.add(faGithub, faTwitter, faEnvelope);
 require('~/main.css');
 
 export default function (Vue, { router, head, isClient }) {
-  head.bodyAttrs = { class: "" }
+    head.bodyAttrs = { class: '' };
 
-  // Set default layout as a global component
-  Vue.component('Layout', DefaultLayout);
-  Vue.component('font-awesome', FontAwesomeIcon);
-};
+    // Set default layout as a global component
+    Vue.component('Layout', DefaultLayout);
+    Vue.component('font-awesome', FontAwesomeIcon);
+}
