@@ -22,10 +22,10 @@
             Hi there, I'm Lloyd. -->
         <!-- </h1> -->
         <h1 class="text-4xl sm:text-6xl font-light leading-tight">
-            Hi there, I'm Lloyd.
+            Hi there, I'm Lloyd
         </h1>
         <h2 class="mt-2 text-3xl sm:text-5xl text-gray-600 font-light leading-tight">
-            I make things.
+            I make things
         </h2>
         <!-- <svg class="h-12 w-auto hidden md:block" viewBox="0 0 273 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <title>Tailwind CSS</title>
@@ -44,8 +44,8 @@
             I make things.
         </h2> -->
 
-        <!-- <font-awesome :icon="['fab', 'github']" size="10x" />
-<font-awesome :icon="['fab', 'twitter']"/> -->
+        <font-awesome :icon="['fab', 'github']" size="10x" />
+<font-awesome :icon="['fab', 'twitter']"/>
     </div>
 
     <!-- <div class="bg-gray-300 mt-16">
