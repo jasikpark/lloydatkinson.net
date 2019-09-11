@@ -7,8 +7,13 @@
                 </h1>
                 <form
                     name="contact-me"
-                    class="md:flex md:flex-wrap md:justify-between"
-                    netlify>
+                    method="POST"
+                    netlify
+                    netlify-honeypot="filter"
+                    class="md:flex md:flex-wrap md:justify-between">
+                    <div class="hidden">
+                        <input type="text" name="filter">
+                    </div>
                     <div class="flex flex-col mb-4 md:w-1/2">
                         <label
                             class="mb-2 uppercase tracking-wide text-lg text-gray-700"
