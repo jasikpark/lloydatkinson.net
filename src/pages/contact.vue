@@ -10,9 +10,12 @@
                     method="POST"
                     netlify
                     netlify-honeypot="filter"
-                    class="md:flex md:flex-wrap md:justify-between">
+                    class="md:flex md:flex-wrap md:justify-between"
+                    @submit.prevent="handleSubmit">
                     <div class="hidden">
-                        <input type="text" name="filter">
+                        <input
+                            type="text"
+                            name="filter">
                     </div>
                     <div class="flex flex-col mb-4 md:w-1/2">
                         <label
@@ -130,7 +133,25 @@
 
 <script>
 export default {
-
+    methods: {
+        encode (data) {
+            return Object.keys(data)
+                .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+                .join('&');
+        },
+        handleSubmit (e) {
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: this.encode({
+                    'form-name': e.target.getAttribute('name'),
+                    ...this.formData,
+                }),
+            })
+                .then(() => this.$router.push('/contact'))
+                .catch(error => alert(error));
+        },
+    },
 };
 </script>
 
