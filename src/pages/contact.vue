@@ -7,24 +7,25 @@
                 </h1>
                 <form
                     name="contact-me"
+                    action="/thank-you/"
                     method="POST"
                     netlify
                     netlify-honeypot="filter"
-                    class="md:flex md:flex-wrap md:justify-between"
-                    @submit.prevent="handleSubmit">
+                    class="md:flex md:flex-wrap md:justify-between">                    
                     <div class="hidden">
-                        <input
+                        <!-- <input
                             type="text"
-                            name="filter">
+                            name="filter"> -->
+                            <input type="hidden" name="filter" />
                     </div>
                     <div class="flex flex-col mb-4 md:w-1/2">
                         <label
                             class="mb-2 uppercase tracking-wide text-lg text-gray-700"
-                            for="first_name">
+                            for="first-name">
                             First Name
                         </label>
                         <input
-                            name="first_name"
+                            name="first-name"
                             type="text"
                             class="py-2 px-3 md:mr-2 text-grey-darkest border"
                             autocomplete="given-name">
@@ -32,13 +33,13 @@
                     <div class="flex flex-col mb-4 md:w-1/2">
                         <label
                             class="mb-2 md:ml-2 uppercase text-lg text-gray-700"
-                            for="last_name">
+                            for="last-name">
                             Last Name
                         </label>
                         <input
                             class="md:ml-2 py-2 px-3 text-grey-darkest border"
                             type="text"
-                            name="last_name">
+                            name="last-name">
                     </div>
                     <div class="flex flex-col mb-4 md:w-full">
                         <label
@@ -54,16 +55,17 @@
                     <div class="flex flex-col mb-6 md:w-full">
                         <label
                             class="mb-2 uppercase text-lg text-gray-700"
-                            for="password">
+                            for="message">
                             Message
                         </label>
                         <textarea
+                            name="message"
                             class="py-2 px-3 text-grey-darkest border"
                             rows="8" />
                     </div>
                     <button
                         class="block mx-auto p-4 rounded bg-red-600 hover:bg-teal-dark text-white uppercase text-lg"
-                        type="submit">
+                        >
                         Send
                     </button>
                 </form>
@@ -133,6 +135,7 @@
 
 <script>
 export default {
+    // @submit.prevent="handleSubmit">
     methods: {
         encode (data) {
             return Object.keys(data)
@@ -140,6 +143,7 @@ export default {
                 .join('&');
         },
         handleSubmit (e) {
+            debugger;
             fetch('/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
