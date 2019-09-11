@@ -1,7 +1,7 @@
 <template>
     <layout>
         <div class="flex items-center w-full">
-            <div class="w-full bg-white shadow-md p-4 md:p-8 m-4 md:max-w-3xl md:mx-auto">
+            <div class="w-full bg-white p-4 md:p-8 m-4 md:max-w-3xl md:mx-auto">
                 <h1 class="block w-full text-center text-center text-5xl text-gray-800 font-light leading-tight mb-8">
                     Get in touch
                 </h1>
