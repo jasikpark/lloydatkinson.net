@@ -148,7 +148,7 @@ export default {
                     ...this.formData,
                 }),
             })
-                .then(() => this.$router.push('/contact'))
+                .then(() => this.$router.push('/'))
                 .catch(error => alert(error));
         },
     },
