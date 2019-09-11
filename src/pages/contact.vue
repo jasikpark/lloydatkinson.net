@@ -7,7 +7,7 @@
                 </h1>
                 <form
                     name="contact-me"
-                    action="/thank-you/"
+                    action="/thank-you/english.html"
                     method="POST"
                     netlify
                     netlify-honeypot="filter"
