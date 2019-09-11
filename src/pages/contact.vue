@@ -1,6 +1,71 @@
 <template>
     <layout>
-        <form class="w-full max-w-sm">
+        <div class="flex items-center w-full">
+            <div class="w-full bg-white shadow-md p-4 md:p-8 m-4 md:max-w-3xl md:mx-auto">
+                <h1 class="block w-full text-center text-center text-5xl text-gray-800 font-light leading-tight mb-8">
+                    Get in touch
+                </h1>
+                <form
+                    name="contact-me"
+                    class="md:flex md:flex-wrap md:justify-between"
+                    netlify>
+                    <div class="flex flex-col mb-4 md:w-1/2">
+                        <label
+                            class="mb-2 uppercase tracking-wide text-lg text-gray-700"
+                            for="first_name">
+                            First Name
+                        </label>
+                        <input
+                            name="first_name"
+                            type="text"
+                            class="py-2 px-3 md:mr-2 text-grey-darkest border"
+                            autocomplete="given-name">
+                    </div>
+                    <div class="flex flex-col mb-4 md:w-1/2">
+                        <label
+                            class="mb-2 md:ml-2 uppercase text-lg text-gray-700"
+                            for="last_name">
+                            Last Name
+                        </label>
+                        <input
+                            class="md:ml-2 py-2 px-3 text-grey-darkest border"
+                            type="text"
+                            name="last_name">
+                    </div>
+                    <div class="flex flex-col mb-4 md:w-full">
+                        <label
+                            class="mb-2 uppercase text-lg text-gray-700"
+                            for="email">
+                            Email
+                        </label>
+                        <input
+                            class="py-2 px-3 text-grey-darkest border"
+                            type="email"
+                            name="email">
+                    </div>
+                    <div class="flex flex-col mb-6 md:w-full">
+                        <label
+                            class="mb-2 uppercase text-lg text-gray-700"
+                            for="password">
+                            Message
+                        </label>
+                        <textarea
+                            class="py-2 px-3 text-grey-darkest border"
+                            rows="8" />
+                    </div>
+                    <button
+                        class="block mx-auto p-4 rounded bg-red-600 hover:bg-teal-dark text-white uppercase text-lg"
+                        type="submit">
+                        Send
+                    </button>
+                </form>
+                <!-- <a
+                    class="block w-full text-center no-underline text-sm text-grey-dark hover:text-grey-darker"
+                    href="/login">Already have an account?</a> -->
+            </div>
+        </div>
+
+        <!-- <form class="w-full max-w-sm">
             <div class="md:flex md:items-center mb-6">
                 <div class="md:w-1/3">
                     <label
@@ -54,7 +119,7 @@
                     </button>
                 </div>
             </div>
-        </form>
+        </form> -->
     </layout>
 </template>
 
