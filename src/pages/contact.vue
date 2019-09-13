@@ -9,14 +9,9 @@
                     name="contact-me"
                     action="https://www.form-data.com/_functions/submit/649wd3gr0js3w8wna30naw"
                     method="POST"
-                    netlify
-                    netlify-honeypot="filter"
                     class="md:flex md:flex-wrap md:justify-between">                    
                     <div class="hidden">
-                        <!-- <input
-                            type="text"
-                            name="filter"> -->
-                            <input type="hidden" name="filter" />
+                        <input type="text" name="filter" />
                     </div>
                     <div class="flex flex-col mb-4 md:w-1/2">
                         <label
@@ -64,8 +59,7 @@
                             rows="5" />
                     </div>
                     <button
-                        class="block mx-auto p-4 rounded bg-red-600 hover:bg-teal-dark text-white uppercase text-lg"
-                        >
+                        class="block mx-auto p-4 rounded bg-red-600 hover:bg-red-700 active:bg-red-800 text-white uppercase text-lg">
                         Send
                     </button>
                 </form>
@@ -132,33 +126,3 @@
         </form> -->
     </layout>
 </template>
-
-<script>
-export default {
-    // @submit.prevent="handleSubmit">
-    methods: {
-        encode (data) {
-            return Object.keys(data)
-                .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-                .join('&');
-        },
-        handleSubmit (e) {
-            debugger;
-            fetch('/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: this.encode({
-                    'form-name': e.target.getAttribute('name'),
-                    ...this.formData,
-                }),
-            })
-                .then(() => this.$router.push('/'))
-                .catch(error => alert(error));
-        },
-    },
-};
-</script>
-
-<style>
-
-</style>
