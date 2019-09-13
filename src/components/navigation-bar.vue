@@ -7,7 +7,9 @@
             </g-link>
         </div>
         <div class="block lg:hidden">
-            <button class="flex items-center px-3 py-2 border rounded text-red-vibrant border-red-vibrant hover:text-red-600 hover:border-red-600">
+            <button
+                class="flex items-center px-3 py-2 border rounded text-red-vibrant border-red-vibrant hover:text-red-600 hover:border-red-600"
+                @click="toggleMenu">
                 <svg
                     class="fill-current h-3 w-3"
                     viewBox="0 0 20 20"
@@ -19,7 +21,9 @@
                 </svg>
             </button>
         </div>
-        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div
+            class="w-full flex-grow lg:flex lg:items-center lg:w-auto"
+            :class="isOpen ? 'block' : 'hidden'">
             <div class="text-sm lg:flex-grow">
                 <a
                     href=""
@@ -37,7 +41,7 @@
                     About
                 </a>
             </div>
-            <div class="">
+            <div class="mt-8 lg:mt-0">
                 <a href="https://github.com/lloydjatkinson">
                     <font-awesome
                         class="mr-5 text-gray-800 hover:text-red-600 svg-inline--fa fa-github fa-w-16 fa-lg"
@@ -61,6 +65,18 @@
 <script>
 export default {
     name: 'NavigationBar',
+    
+    data () {
+        return {
+            isOpen: false
+        }
+    },
+
+    methods: {
+        toggleMenu () {
+            this.isOpen = !this.isOpen;
+        }
+    }
 };
 </script>
 
