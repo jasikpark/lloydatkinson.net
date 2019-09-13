@@ -61,7 +61,7 @@
                         <textarea
                             name="message"
                             class="py-2 px-3 text-grey-darkest border"
-                            rows="8" />
+                            rows="5" />
                     </div>
                     <button
                         class="block mx-auto p-4 rounded bg-red-600 hover:bg-teal-dark text-white uppercase text-lg"
