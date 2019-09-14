@@ -16,7 +16,7 @@ module.exports = {
             'visited',
             'first',
             'last',
-            'odd'
+            'odd',
         ],
     },
     plugins: []

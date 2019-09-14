@@ -12,3 +12,11 @@
     <slot/>
   </div>
 </template>
+
+    <div class="bg-gray-300 mt-16">
+      <p class="xl:text-purple-600">XL</p>
+      <p class="lg:text-purple-600">LG</p>
+      <p class="md:text-purple-600">MD</p>
+      <p class="sm:text-purple-600">SM</p>
+      <p class="text-purple-600">Normal</p>
+    </div>
