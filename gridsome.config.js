@@ -6,6 +6,8 @@
 
 module.exports = {
   siteName: 'lloydatkinson.net',
+  siteDescription: 'Lloyd Atkinson - Software Developer and Maker',
+  siteUrl: 'https://lloydatkinson.net',
   plugins: [
     {
       use: 'gridsome-plugin-tailwindcss',
@@ -21,7 +23,7 @@ module.exports = {
     {
       use: '@gridsome/plugin-google-analytics',
       options: {
-        id: 'UA-148006071-1'
+        id: 'UA-148006071-1',
       }
     }
   ]

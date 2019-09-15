@@ -8,6 +8,7 @@ import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
 import DefaultLayout from '~/layouts/Default.vue';
+import FeatureHeading from '~/components/ui/feature-heading.vue';
 
 config.autoAddCss = false;
 library.add(faGithub, faTwitter, faEnvelope);
@@ -15,9 +16,13 @@ library.add(faGithub, faTwitter, faEnvelope);
 require('~/main.css');
 
 export default function (Vue, { router, head, isClient }) {
-    head.bodyAttrs = { class: '' };
+    head.meta.push({
+        name: 'keywords',
+        content: 'software development,programming,embedded,low level programming,electronics,maker,pic microcontroller,.net,.net core,c#,javascript,es6,es7,vue,vue.js'
+    });
 
     // Set default layout as a global component
-    Vue.component('Layout', DefaultLayout);
+    Vue.component('layout', DefaultLayout);
     Vue.component('font-awesome', FontAwesomeIcon);
+    Vue.component('feature-heading', FeatureHeading);
 }

@@ -1,12 +1,12 @@
 <template>
-    <Layout>
+    <layout>
         <feature-heading bold>
             Hi there, I'm Lloyd
         </feature-heading>
         <feature-heading>
             I make things
         </feature-heading>
-    </Layout>
+    </layout>
 </template>
 
 <script>
