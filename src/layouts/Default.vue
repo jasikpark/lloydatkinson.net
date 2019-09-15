@@ -4,7 +4,7 @@
             <!-- {{ $static.metaData.siteName }} -->
             <navigation-bar />
         </header>
-        <main>
+        <main class="px-4">
             <slot />
         </main>
     </div>

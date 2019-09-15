@@ -2,7 +2,8 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                'red-vibrant': '#FF0000'
+                'red-vibrant': '#FF0000',
+                'red-feature': '',
             },
         },
     },
