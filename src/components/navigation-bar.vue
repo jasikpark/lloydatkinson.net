@@ -1,9 +1,9 @@
 <template>
-    <nav class="flex items-center justify-between flex-wrap bg-gray-100 p-6">
+    <nav class="flex flex-wrap items-center justify-between bg-gray-100 p-5">
         <div class="flex items-center flex-shrink-0 text-gray-700 mr-6">
             <!-- <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg> -->
             <g-link to="/">
-                <span class="font-semibold text-xl tracking-tight lg:hover:text-red-vibrant">Lloyd Atkinson</span>
+                <span class="mr-8 font-semibold text-xl tracking-tight lg:hover:text-red-vibrant">Lloyd Atkinson</span>
             </g-link>
         </div>
         <div class="block lg:hidden">
@@ -27,19 +27,19 @@
             <div class="text-sm lg:flex-grow">
                 <a
                     href=""
-                    class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-red-vibrant mr-4 text-base">
+                    class="block mt-4 mr-8 lg:inline-block lg:mt-0 text-base text-gray-700 hover:text-red-vibrant">
                     Posts
                 </a>
                 <a
                     href=""
-                    class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-red-vibrant mr-4">
+                    class="block mt-4 mr-8 lg:inline-block lg:mt-0 text-base text-gray-700 hover:text-red-vibrant">
                     Projects
                 </a>
-                <a
-                    href=""
-                    class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-red-vibrant">
+                <g-link
+                    to="/about"
+                    class="block mt-4 lg:inline-block lg:mt-0 text-base text-gray-700 hover:text-red-vibrant">
                     About
-                </a>
+                </g-link>
             </div>
             <div class="mt-8 lg:mt-0">
                 <a href="https://github.com/lloydjatkinson">
@@ -52,8 +52,7 @@
                         class="text-gray-800 hover:text-red-600 svg-inline--fa fa-github fa-w-16 fa-lg"
                         :icon="['far', 'envelope']" />
                 </g-link>
-                <a href="https://github.com/lloydjatkinson">
-                </a>
+                <a href="https://github.com/lloydjatkinson" />
             </div>
             <!-- <div>
               <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a>
@@ -65,18 +64,18 @@
 <script>
 export default {
     name: 'NavigationBar',
-    
+
     data () {
         return {
-            isOpen: false
-        }
+            isOpen: false,
+        };
     },
 
     methods: {
         toggleMenu () {
             this.isOpen = !this.isOpen;
-        }
-    }
+        },
+    },
 };
 </script>
 

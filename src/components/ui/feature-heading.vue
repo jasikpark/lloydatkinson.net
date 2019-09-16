@@ -4,7 +4,7 @@
         class="font-light leading-tight">
         <h1
             v-if="title"
-            class="mt-24 text-4xl sm:text-6xl">
+            class="mt-20 text-4xl sm:text-6xl">
             <slot />
         </h1>
         <h2
@@ -14,7 +14,7 @@
         </h2>
         <h3
             v-if="section"
-            class="mt-10 mb-4 text-2xl sm:text-3xl text-gray-700">
+            class="mt-10 mb-2 text-2xl sm:text-3xl text-gray-700">
             <slot />
         </h3>
     </div>
