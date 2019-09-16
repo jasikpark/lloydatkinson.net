@@ -26,12 +26,12 @@
             :class="isOpen ? 'block' : 'hidden'">
             <div class="text-sm lg:flex-grow">
                 <a
-                    href=""
+                    href="/"
                     class="block mt-4 mr-8 lg:inline-block lg:mt-0 text-base text-gray-700 hover:text-red-vibrant">
                     Posts
                 </a>
                 <a
-                    href=""
+                    href="/"
                     class="block mt-4 mr-8 lg:inline-block lg:mt-0 text-base text-gray-700 hover:text-red-vibrant">
                     Projects
                 </a>
