@@ -14,7 +14,7 @@
         </h2>
         <h3
             v-if="section"
-            class="mt-2 mb-8 text-2xl sm:text-3xl text-gray-700">
+            class="mt-10 mb-4 text-2xl sm:text-3xl text-gray-700">
             <slot />
         </h3>
     </div>
