@@ -1,128 +1,137 @@
 <template>
     <layout>
-        <div class="flex items-center w-full">
-            <div class="w-full bg-white md:p-8 m-4 md:max-w-3xl md:mx-auto">
+        <div v-if="api.successful">
+            <feature-heading title>
+                Thank you!
+            </feature-heading>
+            <feature-heading subtitle>
+                I'll get back to you soon
+            </feature-heading>
+        </div>
+
+        <div class="flex items-center w-full" v-else>
+            <div class="w-full m-4 bg-white md:p-8 md:max-w-3xl md:mx-auto">
                 <feature-heading subtitle>
                     Get in touch
                 </feature-heading>
+                    
                 <form
-                    name="contact-me"
-                    action="https://www.form-data.com/_functions/submit/649wd3gr0js3w8wna30naw"
-                    method="POST"
                     class="md:flex md:flex-wrap md:justify-between">                    
                     <div class="hidden">
                         <input type="text" name="filter" />
                     </div>
                     <div class="flex flex-col mb-4 md:w-1/2">
                         <label
-                            class="mb-2 uppercase tracking-wide text-lg text-gray-700"
+                            class="mb-2 text-lg tracking-wide text-gray-700 uppercase"
                             for="first-name">
                             First Name
                         </label>
                         <input
                             name="first-name"
                             type="text"
-                            class="py-2 px-3 md:mr-2 text-grey-darkest border"
-                            autocomplete="given-name">
+                            class="px-3 py-2 border md:mr-2 text-grey-darkest"
+                            autocomplete="given-name"
+                            v-model="firstName">
                     </div>
                     <div class="flex flex-col mb-4 md:w-1/2">
                         <label
-                            class="mb-2 md:ml-2 uppercase text-lg text-gray-700"
+                            class="mb-2 text-lg text-gray-700 uppercase md:ml-2"
                             for="last-name">
-                            Last Name
+                            Surname
                         </label>
                         <input
-                            class="md:ml-2 py-2 px-3 text-grey-darkest border"
+                            class="px-3 py-2 border md:ml-2 text-grey-darkest"
                             type="text"
-                            name="last-name">
+                            name="last-name"
+                            v-model="surname">
                     </div>
                     <div class="flex flex-col mb-4 md:w-full">
                         <label
-                            class="mb-2 uppercase text-lg text-gray-700"
+                            class="mb-2 text-lg text-gray-700 uppercase"
                             for="email">
                             Email
                         </label>
                         <input
-                            class="py-2 px-3 text-grey-darkest border"
+                            class="px-3 py-2 border text-grey-darkest"
                             type="email"
-                            name="email">
+                            name="email"
+                            v-model="emailAddress">
                     </div>
                     <div class="flex flex-col mb-6 md:w-full">
                         <label
-                            class="mb-2 uppercase text-lg text-gray-700"
+                            class="mb-2 text-lg text-gray-700 uppercase"
                             for="message">
                             Message
                         </label>
                         <textarea
                             name="message"
-                            class="py-2 px-3 text-grey-darkest border"
-                            rows="5" />
+                            class="px-3 py-2 border text-grey-darkest"
+                            rows="5"
+                            v-model="message" />
                     </div>
                     <button
-                        class="block mx-auto p-4 rounded bg-red-600 hover:bg-red-700 active:bg-red-800 text-white uppercase text-lg">
+                        class="block p-4 mx-auto text-lg text-white uppercase bg-red-600 rounded hover:bg-red-700 active:bg-red-800 disabled:bg-red-300"
+                        type="button"
+                        @click="sendMessage">
                         Send
                     </button>
                 </form>
-                <!-- <a
-                    class="block w-full text-center no-underline text-sm text-grey-dark hover:text-grey-darker"
-                    href="/login">Already have an account?</a> -->
             </div>
         </div>
-
-        <!-- <form class="w-full max-w-sm">
-            <div class="md:flex md:items-center mb-6">
-                <div class="md:w-1/3">
-                    <label
-                        class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                        for="inline-full-name">
-                        Full Name
-                    </label>
-                </div>
-                <div class="md:w-2/3">
-                    <input
-                        id="inline-full-name"
-                        class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                        type="text"
-                        value="Jane Doe">
-                </div>
-            </div>
-            <div class="md:flex md:items-center mb-6">
-                <div class="md:w-1/3">
-                    <label
-                        class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                        for="inline-username">
-                        Password
-                    </label>
-                </div>
-                <div class="md:w-2/3">
-                    <input
-                        id="inline-username"
-                        class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                        type="password"
-                        placeholder="******************">
-                </div>
-            </div>
-            <div class="md:flex md:items-center mb-6">
-                <div class="md:w-1/3" />
-                <label class="md:w-2/3 block text-gray-500 font-bold">
-                    <input
-                        class="mr-2 leading-tight"
-                        type="checkbox">
-                    <span class="text-sm">
-                        Send me your newsletter!
-                    </span>
-                </label>
-            </div>
-            <div class="md:flex md:items-center">
-                <div class="md:w-1/3" />
-                <div class="md:w-2/3">
-                    <button
-                        class="shadow bg-red-600 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
-                        type="button">
-                        Sign Up
-                    </button>
-                </div>
-            </div>
-        </form> -->
     </layout>
 </template>
+
+<script>
+import axios from 'axios';
+
+export default {
+    name: 'Contact',
+    data () {
+        return {
+            api: {
+                successful: false,
+                pending: false,
+                failed: false,
+            },
+            firstName: '',
+            surname: '',
+            emailAddress: '',
+            message: '',
+        }
+    },
+    computed: {
+        formValid () {
+            const valid = this.firstName.length > 0
+                && this.surname.length > 0
+                && this.emailAddress.length > 0
+                && this.emailAddress.includes('@')
+                && this.message.length > 10
+
+            return valid;
+        }
+    },
+    methods: {
+        async sendMessage () {
+            this.api.pending = true;
+
+            try {
+                await axios.post(
+                    'https://prod-01.uksouth.logic.azure.com:443/workflows/3cfba9cc1a424c78897c5e15cdc16583/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=vRs64ZJFKNGrZumW_KZJTsZ9g2-iMMIqMpk7PfNxZQg',
+                    {
+                        emailAddress: this.emailAddress,
+                        firstName: this.firstName,
+                        surname: this.surname,
+                        message: this.message,
+                    }
+                );
+
+            this.api.pending = false;
+            this.api.successful = true;
+                
+            } catch (error) {
+                this.api.failed = true;
+            }
+        }
+    }
+}
+</script>

@@ -18,6 +18,7 @@ module.exports = {
             'first',
             'last',
             'odd',
+            'disabled'
         ],
     },
     plugins: []
