@@ -1,5 +1,5 @@
 <template>
-    <div class="border-t-4 border-red-vibrant container mx-auto">
+    <div class="container mx-auto border-t-4 border-red-vibrant flex flex-wrap flex-col">
         <header class="mb-4">
             <!-- {{ $static.metaData.siteName }} -->
             <navigation-bar />
