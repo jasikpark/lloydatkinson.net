@@ -25,7 +25,7 @@
             class="w-full flex-grow lg:flex lg:items-center lg:w-auto"
             :class="isOpen ? 'block' : 'hidden'">
             <div class="text-sm lg:flex-grow">
-                <g-link
+                <!-- <g-link
                     to="/posts"
                     class="block mt-4 mr-8 lg:inline-block lg:mt-0 text-base text-gray-700 hover:text-red-vibrant">
                     Posts
@@ -34,7 +34,7 @@
                     to="/projects"
                     class="block mt-4 mr-8 lg:inline-block lg:mt-0 text-base text-gray-700 hover:text-red-vibrant">
                     Projects
-                </g-link>
+                </g-link> -->
                 <g-link
                     to="/about"
                     class="block mt-4 lg:inline-block lg:mt-0 text-base text-gray-700 hover:text-red-vibrant">

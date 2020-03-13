@@ -1,6 +1,11 @@
 <template>
     <layout>
-        <div v-if="api.successful">
+        <div v-if="api.pending">
+            <feature-heading title>
+                One moment...
+            </feature-heading>
+        </div>
+        <div v-else-if="api.successful">
             <feature-heading title>
                 Thank you!
             </feature-heading>

@@ -13,24 +13,6 @@ module.exports = {
     // },
     plugins: [
         {
-            use: '@gridsome/vue-remark',
-            options: {
-                typeName: 'Post', // required
-                baseDir: './content/post', // where .md files are located.
-                // template: './src/templates/Documentation.vue' // optional
-                template: './src/templates/post.vue',
-                route: '/post/:title',
-            },
-        },
-        {
-            use: '@gridsome/vue-remark',
-            options: {
-                typeName: 'Project', // required
-                baseDir: './content/project', // where .md files are located.
-                // template: './src/templates/Documentation.vue' // optional
-            },
-        },
-        {
             use: 'gridsome-plugin-tailwindcss',
             options: {
                 tailwindConfig: 'tailwind.config.js',

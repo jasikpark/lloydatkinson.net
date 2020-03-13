@@ -14,12 +14,10 @@
         <article>
             <section>
                 <feature-heading section>
-                    Skills & Interests
+                    Me
                 </feature-heading>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iure dolores delectus at harum, aliquam praesentium perspiciatis perferendis maiores et rem, ratione iste? Maxime fugit itaque distinctio exercitationem ut necessitatibus.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae tenetur beatae optio possimus ratione quos quod nam nostrum iusto expedita ut quisquam deserunt veritatis, qui quibusdam iure voluptatum voluptas ad.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolore veniam unde suscipit maiores officia impedit illum facilis obcaecati. Aperiam reiciendis quisquam nihil facilis expedita provident velit eos sint voluptate.
+                    I'm a software developer and maker. I've got various interests. Making good software and solutions using clean and maintainble code is what I strive for.
                 </p>
             </section>
 
@@ -28,9 +26,9 @@
                     How I made this site
                 </feature-heading>
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam nostrum nisi, ullam id blanditiis dicta cum assumenda asperiores voluptates reiciendis ratione laboriosam accusantium! Suscipit dolore sequi quas, tempore porro asperiores?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla accusamus facere sint aliquam adipisci error atque quia incidunt molestiae animi laudantium placeat dolorem, numquam architecto temporibus reiciendis, impedit sunt exercitationem?
+                    This site is a Vue.js based single page application, powered by Gridsome, a static site generator for Vue.js.
                 </p>
+                <p>It's hosted on Netlify.</p>
             </section>
         </article>
     </layout>
