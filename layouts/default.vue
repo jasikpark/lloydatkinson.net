@@ -29,8 +29,8 @@
       <Nuxt />
     </main>
   </div> -->
-  <div class="container p-2 mx-auto text-xl sm:p-6">
-    <nav class="flex items-center justify-between pb-6 text-xl border-b-2 border-red-400 select-none">
+  <div class="container p-2 mx-auto sm:p-6">
+    <nav class="flex justify-between pb-6 text-xl border-b-2 border-red-400 select-none">
       Lloyd Atkinson
       <div class="flex space-x-12">
         <div class="hidden sm:block">
@@ -46,15 +46,15 @@
             </li>
           </ul>
         </div>
-        <ul class="flex space-x-4">
+        <ul class="flex items-center space-x-4">
           <li>
-            <svg class="w-8 h-8 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="w-6 h-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
           </li>
           <li>
             <svg
-              class="w-8 h-8 text-orange-500"
+              class="w-6 h-6 text-orange-500"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
