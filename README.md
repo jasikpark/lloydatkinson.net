@@ -1,2 +1,2 @@
 # lloydatkinson.net
-![ci](https://github.com/lloydjatkinson/lloydatkinson.net/workflows/ci/badge.svg)
+![build](https://github.com/lloydjatkinson/lloydatkinson.net/workflows/ci/badge.svg)
