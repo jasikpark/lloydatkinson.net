@@ -29,8 +29,8 @@
       <Nuxt />
     </main>
   </div> -->
-    <div class="container p-2 mx-auto sm:p-6">
-        <nav class="flex justify-between pb-6 text-xl border-b-2 border-red-400 select-none">
+    <div class="container p-2 mx-auto sm:p-6 sm:px-24">
+        <nav class="flex justify-between pb-6 text-xl border-b border-red-500 select-none">
             Lloyd Atkinson
             <div class="flex space-x-12">
                 <div class="hidden sm:block">
@@ -72,6 +72,18 @@
         <main class="mt-20">
             <Nuxt />
         </main>
+        <div class="bg-red-200">
+            base
+        </div>
+        <div class="sm:bg-red-200">
+            sm
+        </div>
+        <div class="md:bg-red-200">
+            md
+        </div>
+        <div class="lg:bg-red-200">
+            lg
+        </div>
         <footer />
     </div>
 </template>
