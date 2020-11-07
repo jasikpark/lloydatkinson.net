@@ -1,5 +1,5 @@
 <template>
-    <p>{{ commit }}</p>
+    <p>{{ $config.gitCommit }}</p>
 </template>
 
 <script>
