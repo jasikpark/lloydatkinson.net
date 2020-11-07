@@ -12,10 +12,10 @@
                                 <NuxtLink to="/projects">Projects</NuxtLink>
                             </li>
                             <li class="cursor-pointer hover:text-gray-900">
-                                <NuxtLink to="/projects">Articles</NuxtLink>
+                                <NuxtLink to="/articles">Articles</NuxtLink>
                             </li>
                             <li class="cursor-pointer hover:text-gray-900">
-                                <NuxtLink to="/projects">About</NuxtLink>
+                                <NuxtLink to="/about">About</NuxtLink>
                             </li>
                         </ul>
                     </div>
