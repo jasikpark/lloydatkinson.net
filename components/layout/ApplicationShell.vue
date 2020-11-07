@@ -9,13 +9,13 @@
                     <div class="hidden sm:block">
                         <ul class="flex space-x-6 text-gray-600">
                             <li class="cursor-pointer hover:text-gray-900">
-                                Projects
+                                <NuxtLink to="/projects">Projects</NuxtLink>
                             </li>
                             <li class="cursor-pointer hover:text-gray-900">
-                                Articles
+                                <NuxtLink to="/projects">Articles</NuxtLink>
                             </li>
                             <li class="cursor-pointer hover:text-gray-900">
-                                About
+                                <NuxtLink to="/projects">About</NuxtLink>
                             </li>
                         </ul>
                     </div>
