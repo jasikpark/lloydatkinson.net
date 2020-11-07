@@ -2,7 +2,7 @@
     <div class="container max-w-6xl p-2 mx-auto sm:p-6">
         <nav class="flex justify-between pb-2 text-xl border-b border-red-500 select-none sm:pb-6">
             <slot name="header">
-                Lloyd Atkinson
+                <NuxtLink to="/">Lloyd Atkinson</NuxtLink>
             </slot>
             <div class="flex space-x-12">
                 <slot name="navigation-menu">
