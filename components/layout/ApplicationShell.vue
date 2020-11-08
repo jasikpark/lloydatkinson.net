@@ -2,20 +2,28 @@
     <div class="container max-w-6xl p-2 mx-auto sm:p-6">
         <nav class="flex justify-between pb-2 text-xl border-b border-red-500 select-none sm:pb-6">
             <slot name="header">
-                <NuxtLink to="/">Lloyd Atkinson</NuxtLink>
+                <NuxtLink to="/">
+                    Lloyd Atkinson
+                </NuxtLink>
             </slot>
             <div class="flex space-x-12">
                 <slot name="navigation-menu">
                     <div class="hidden sm:block">
                         <ul class="flex space-x-6 text-gray-600">
                             <li class="cursor-pointer hover:text-gray-900">
-                                <NuxtLink to="/projects">Projects</NuxtLink>
+                                <NuxtLink to="/projects">
+                                    Projects
+                                </NuxtLink>
                             </li>
                             <li class="cursor-pointer hover:text-gray-900">
-                                <NuxtLink to="/articles">Articles</NuxtLink>
+                                <NuxtLink to="/articles">
+                                    Articles
+                                </NuxtLink>
                             </li>
                             <li class="cursor-pointer hover:text-gray-900">
-                                <NuxtLink to="/about">About</NuxtLink>
+                                <NuxtLink to="/about">
+                                    About
+                                </NuxtLink>
                             </li>
                         </ul>
                     </div>
