@@ -1,7 +1,5 @@
 <template>
-    <ApplicationShell>
-        <img src="~/assets/404.jpg" />
-    </ApplicationShell>
+    <img src="~/assets/404.jpg" />
 </template>
 
 <script lang="ts">
