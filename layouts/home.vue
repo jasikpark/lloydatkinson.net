@@ -1,10 +1,10 @@
 <template>
-    <ApplicationShell>
+    <Layout>
         <template #header>
             I'm a different layout!
         </template>
         <Nuxt />
-    </ApplicationShell>
+    </Layout>
 </template>
 
 <script lang="ts">

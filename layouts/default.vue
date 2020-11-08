@@ -1,7 +1,7 @@
 <template>
-    <ApplicationShell>
+    <Layout>
         <Nuxt />
-    </ApplicationShell>
+    </Layout>
 </template>
 
 <script lang="ts">
