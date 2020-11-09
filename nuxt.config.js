@@ -24,14 +24,11 @@ export default {
     ],
 
     // Auto import components (https://go.nuxtjs.dev/config-components)
-    components: [
-        '~/components', // shortcut to { path: '~/components' }
-        { path: '~/layouts/components/' }
-    ],
+    components: true,
 
     // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
     buildModules: [
-    // https://go.nuxtjs.dev/typescript
+        // https://go.nuxtjs.dev/typescript
         '@nuxt/typescript-build',
         // https://go.nuxtjs.dev/tailwindcss
         '@nuxtjs/tailwindcss'
@@ -39,7 +36,7 @@ export default {
 
     // Modules (https://go.nuxtjs.dev/config-modules)
     modules: [
-    // https://go.nuxtjs.dev/axios
+        // https://go.nuxtjs.dev/axios
         '@nuxtjs/axios',
         // https://go.nuxtjs.dev/pwa
         '@nuxtjs/pwa',

@@ -1,5 +1,7 @@
 <template>
-    <img class="flex justify-center" src="~/assets/404.jpg">
+    <div class="flex justify-center">
+        <img src="~/assets/404.jpg">
+    </div>
 </template>
 
 <script lang="ts">

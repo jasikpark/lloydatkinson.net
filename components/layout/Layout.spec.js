@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 
-import Layout from './Layout'
+import Layout from './Layout.vue'
 
 describe('layouts', () => {
     describe('components', () => {
