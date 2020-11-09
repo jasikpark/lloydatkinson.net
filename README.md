@@ -1,3 +1,20 @@
 # lloydatkinson.net
-![build](https://github.com/lloydjatkinson/lloydatkinson.net/workflows/build/badge.svg)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a02a049f-7cce-4080-8b03-291c47b0e3fd/deploy-status)](https://app.netlify.com/sites/lloydatkinson/deploys)
+
+## Build Setup
+
+```bash
+# install dependencies
+$ npm install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm run start
+
+# generate static project
+$ npm run generate
+```
+
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

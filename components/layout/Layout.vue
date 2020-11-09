@@ -31,8 +31,16 @@
                 <slot name="navigation-icons">
                     <ul class="flex items-center space-x-4">
                         <li>
-                            <svg class="w-6 h-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            <svg
+                                class="w-6 h-6 text-gray-700"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
                         </li>
                         <li>
@@ -46,7 +54,10 @@
                                 stroke-linejoin="round">
                                 <path d="M4 11a9 9 0 0 1 9 9" />
                                 <path d="M4 4a16 16 0 0 1 16 16" />
-                                <circle cx="5" cy="19" r="1" />
+                                <circle
+                                    cx="5"
+                                    cy="19"
+                                    r="1" />
                             </svg>
                         </li>
                     </ul>
@@ -60,13 +71,12 @@
     </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
+<script>
+export default {
     data () {
         return {
             navigationMenuOpened: false
         }
     }
-})
+}
 </script>
