@@ -3,27 +3,31 @@
         <nav class="flex justify-between pb-2 text-xl border-b border-red-500 select-none sm:pb-6">
             <slot name="header">
                 <NuxtLink to="/">
-                    Lloyd Atkinson
+                    <span
+                        class="hover:text-black"
+                        @click="showConfetti">
+                        Lloyd Atkinson
+                    </span>
                 </NuxtLink>
             </slot>
             <div class="flex space-x-12">
                 <slot name="navigation-menu">
                     <div class="hidden sm:block">
-                        <ul class="flex space-x-6 text-gray-600">
-                            <li class="cursor-pointer hover:text-gray-900">
-                                <NuxtLink to="/projects">
+                        <ul class="flex space-x-6">
+                            <li>
+                                <NavigationLink to="/projects">
                                     Projects
-                                </NuxtLink>
+                                </NavigationLink>
                             </li>
-                            <li class="cursor-pointer hover:text-gray-900">
-                                <NuxtLink to="/articles">
+                            <li>
+                                <NavigationLink to="/articles">
                                     Articles
-                                </NuxtLink>
+                                </NavigationLink>
                             </li>
-                            <li class="cursor-pointer hover:text-gray-900">
-                                <NuxtLink to="/about">
+                            <li>
+                                <NavigationLink to="/about">
                                     About
-                                </NuxtLink>
+                                </NavigationLink>
                             </li>
                         </ul>
                     </div>
@@ -72,11 +76,30 @@
 </template>
 
 <script>
+import confetti from 'canvas-confetti'
+
 export default {
     data () {
         return {
             navigationMenuOpened: false
         }
-    }
+    },
+
+    methods: {
+        showConfetti () {
+            const randomIntegerInRange = (min, max) =>
+                Math.floor(Math.random() * (max - min + 1)) + min;
+            
+            if (randomIntegerInRange(0, 10) === 0) {
+                confetti({
+                    particleCount: 50,
+                    angle: 270,
+                    origin: { y: -0.1 },
+                    spread: 100,
+                    gravity: 0.5,
+                });   
+            }
+        },
+    },
 }
 </script>
