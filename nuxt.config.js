@@ -55,6 +55,8 @@ export default {
     },
 
     publicRuntimeConfig: {
-        gitCommit: process.env.COMMIT_REF
+        gitBranch: process.env.BRANCH,
+        gitCommit: process.env.COMMIT_REF,
+        buildContext: process.env.CONTEXT,
     }
 }
