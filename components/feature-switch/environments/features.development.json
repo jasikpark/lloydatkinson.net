@@ -1,0 +1,10 @@
+[
+    {
+        "name": "UseNotificationDrawer",
+        "enabled": true
+    },
+    {
+        "name": "NotificationButtons",
+        "enabled": false
+    }
+]

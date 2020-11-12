@@ -20,5 +20,34 @@
                 {{ $config.buildContext }}
             </p>
         </section>
+
+        <section>
+            <h3>Development/Production</h3>
+            <p class="font-mono">
+                Development: {{ $config.dev }}
+            </p>
+            <p class="font-mono">
+                Production: {{ !$config.dev }}
+            </p>
+        </section>
+
+        <section>
+            <h3>Feature Switches</h3>
+            <ul>
+                <li />
+            </ul>
+        </section>
     </div>
 </template>
+
+<script>
+import { mapGetters } from 'vuex';
+
+export default {
+    computed: {
+        env () {
+            return process.env;
+        }
+    },
+};
+</script>
