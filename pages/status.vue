@@ -33,8 +33,12 @@
 
         <section>
             <h3>Feature Switches</h3>
-            <ul>
-                <li />
+            <ul class="font-mono">
+                <li
+                    v-for="feature in features"
+                    :key="feature.name">
+                    {{ feature.name }}: {{ feature.enabled }}
+                </li>
             </ul>
         </section>
     </div>
@@ -45,9 +49,10 @@ import { mapGetters } from 'vuex';
 
 export default {
     computed: {
-        env () {
-            return process.env;
-        }
+        ...mapGetters('FeatureSwitchModule', [
+            'features',
+        ]),
+
     },
 };
 </script>

@@ -1,19 +1,30 @@
-import store from '../store';
+// import store from '../feature-switch/store';
 
-export const getFeatureSwitch = (name) => {
-    const foundFeature = store.getters['FeatureSwitchModule/features'].find((feature) => feature.name === name);
+// export const getFeatureSwitch = (name) => {
+//     const foundFeature = store.getters['FeatureSwitchModule/features'].find((feature) => feature.name === name);
 
-    if (foundFeature) {
-        return { name: foundFeature.name, enabled: foundFeature.enabled };
+//     if (foundFeature) {
+//         return { name: foundFeature.name, enabled: foundFeature.enabled };
+//     }
+
+//     return undefined;
+// };
+
+// export const isFeatureSwitchEnabled = (name) => getFeatureSwitch(name).enabled;
+
+import developmentFeatures from './environments/features.development.js';
+import productionFeatures from './environments/features.production.js';
+
+export const loadFeatureSwitches = (isDevelopment) => {
+    if (isDevelopment) {
+        return developmentFeatures;
+    } else {
+        return productionFeatures;
     }
+}
 
-    return undefined;
-};
-
-export const isFeatureSwitchEnabled = (name) => getFeatureSwitch(name).enabled;
-
-export const defineFeatureSwitches = (features) => {
+export const defineFeatureSwitches = (dispatch, features) => {
     for (const feature of features) {
-        store.dispatch('FeatureSwitchModule/defineFeature', { name: feature.name, enabled: feature.enabled });
+        dispatch('FeatureSwitchModule/defineFeature', { name: feature.name, enabled: feature.enabled });
     }
 };

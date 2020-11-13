@@ -1,4 +1,4 @@
-import getFeatures from './index';
+import getFeatures from './load-feature-switches';
 
 jest.mock('./environments/features.development.json', () => ({
     development: true,
