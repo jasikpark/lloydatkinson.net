@@ -1,10 +1,10 @@
 export default [
     {
-        name: 'UseNotificationDrawer',
+        name: 'FeatureSwitchOne',
         enabled: true
     },
     {
-        name: 'NotificationButtons',
+        name: 'FeatureSwitchTwo',
         enabled: true
     }
 ]

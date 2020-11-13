@@ -41,10 +41,6 @@
                 </li>
             </ul>
         </section>
-
-        <DevelopmentOnly>
-            wfopkweopkfweopkop
-        </DevelopmentOnly>
     </div>
 </template>
 
@@ -56,7 +52,6 @@ export default {
         ...mapGetters('FeatureSwitchModule', [
             'features',
         ]),
-
     },
 };
 </script>
