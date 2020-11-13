@@ -1,5 +1,5 @@
 <template>
-    <div class="space-y-12">
+    <div class="space-y-10">
         <section>
             <h3>Branch</h3>
             <p class="font-mono">
@@ -18,6 +18,13 @@
             <h3>Build Context</h3>
             <p class="font-mono">
                 {{ $config.buildContext }}
+            </p>
+        </section>
+
+        <section>
+            <h3>Build Date/Time</h3>
+            <p class="font-mono">
+                {{ $config.buildDateTime }}
             </p>
         </section>
 

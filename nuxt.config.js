@@ -59,6 +59,7 @@ export default {
         gitBranch: process.env.BRANCH,
         gitCommit: process.env.COMMIT_REF,
         buildContext: process.env.CONTEXT,
+        buildDateTime: new Date().toISOString(),
         environment: process.env,
         dev: process.env.NODE_ENV !== 'production'
     }
