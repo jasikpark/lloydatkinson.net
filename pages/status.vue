@@ -47,12 +47,20 @@
                     {{ feature.name }}: {{ feature.enabled }}
                 </li>
             </ul>
+
+            <button @click="setFeatureAvailability({ name: 'FeatureSwitchOne', enabled: true })">
+                FeatureSwitchOne on
+            </button>
+
+            <button @click="setFeatureAvailability({ name: 'FeatureSwitchOne', enabled: false })">
+                FeatureSwitchOne off
+            </button>
         </section>
     </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
     computed: {
@@ -60,5 +68,11 @@ export default {
             'features',
         ]),
     },
+
+    methods: {
+        ...mapActions('FeatureSwitchModule', [
+            'setFeatureAvailability',
+        ]),
+    }
 };
 </script>
