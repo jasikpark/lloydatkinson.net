@@ -1,8 +1,11 @@
-import faker from 'faker';
+import Vue from 'vue';
 import Vuex from 'vuex';
+import faker from 'faker';
 
 import FeatureSwitchModule from './store/module';
 import { defineFeatureSwitches, getFeatureSwitch, isFeatureSwitchEnabled } from './feature-switch';
+
+Vue.use(Vuex);
 
 const store = new Vuex.Store({
     modules: {
@@ -23,7 +26,7 @@ describe('feature switch', () => {
                     { name: faker.lorem.words, enabled: false },
                 ];
 
-                defineFeatureSwitches(featureSwitches);
+                defineFeatureSwitches(store.dispatch, featureSwitches);
 
                 expect(store.state.FeatureSwitchModule.features.length).toBe(2);
             });
@@ -34,9 +37,9 @@ describe('feature switch', () => {
                     { name: faker.lorem.words, enabled: false },
                 ];
 
-                defineFeatureSwitches(featureSwitches);
+                defineFeatureSwitches(store.dispatch, featureSwitches);
 
-                expect(getFeatureSwitch('Feature1')).toBeDefined();
+                expect(getFeatureSwitch(store, 'Feature1')).toBeDefined();
             });
 
             it('should return undefined when specified feature switch is not in the store', () => {
@@ -45,9 +48,9 @@ describe('feature switch', () => {
                     { name: faker.lorem.words, enabled: false },
                 ];
 
-                defineFeatureSwitches(featureSwitches);
+                defineFeatureSwitches(store.dispatch, featureSwitches);
 
-                expect(getFeatureSwitch(faker.lorem.words)).toBeDefined();
+                expect(getFeatureSwitch(store, faker.lorem.words)).toBeDefined();
             });
 
             it('should return availability of the specified feature switch', () => {
@@ -56,9 +59,9 @@ describe('feature switch', () => {
                     { name: faker.lorem.words, enabled: false },
                 ];
 
-                defineFeatureSwitches(featureSwitches);
+                defineFeatureSwitches(store.dispatch, featureSwitches);
 
-                expect(isFeatureSwitchEnabled('Feature1')).toBe(true);
+                expect(isFeatureSwitchEnabled(store, 'Feature1')).toBe(true);
             });
         });
     });

@@ -9,7 +9,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import isDevelopment from '../../components/development/is-development';
+import isDevelopment from '../components/development/is-development';
 
 export default {
     name: 'Feature',
@@ -35,6 +35,7 @@ export default {
             }
 
             if (isDevelopment()) {
+                // eslint-disable-next-line no-console
                 console.warn(`Unknown feature switch name: ${this.name}`);
             }
             return false;

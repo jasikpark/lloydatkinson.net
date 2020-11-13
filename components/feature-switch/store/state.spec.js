@@ -4,7 +4,7 @@ describe('feature switch', () => {
     describe('store', () => {
         describe('state', () => {
             it('should have expected default empty state', () => {
-                expect(state.features.length).toBe(0);
+                expect(state().features.length).toBe(0);
             });
         });
     });
