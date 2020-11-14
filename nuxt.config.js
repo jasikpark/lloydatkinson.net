@@ -32,8 +32,18 @@ export default {
     // https://go.nuxtjs.dev/eslint
         '@nuxtjs/eslint-module',
         // https://go.nuxtjs.dev/tailwindcss
-        '@nuxtjs/tailwindcss'
+        '@nuxtjs/tailwindcss',
+
+        '@nuxtjs/google-fonts',
+        
     ],
+
+    googleFonts: {
+        families: {
+            Inter: [300, 400, 600, 700],
+        },
+        display: 'swap'
+      },
 
     // Modules (https://go.nuxtjs.dev/config-modules)
     modules: [
@@ -60,7 +70,7 @@ export default {
         gitCommit: process.env.COMMIT_REF,
         buildContext: process.env.CONTEXT,
         buildDateTime: new Date().toISOString(),
-        environment: process.env,
+        // environment: process.env,
         dev: process.env.NODE_ENV !== 'production'
     }
 }
