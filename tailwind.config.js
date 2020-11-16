@@ -3,17 +3,10 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
     theme: {
         fontFamily: {
-            'sans': ['"Segoe UI"', ...defaultTheme.fontFamily.sans],
+            'sans': ['"Inter"', ...defaultTheme.fontFamily.sans],
             'serif': [...defaultTheme.fontFamily.serif],
             'mono': [...defaultTheme.fontFamily.mono]
         },
-
-        // extend: {
-        //     fontFamily: {
-        //         // sans: ['"Segoe UI"', ...defaultTheme.fontFamily.sans]
-        //         sans: ['"Segoe UI"'],
-        //     }
-        // }
     },
     variants: {},
     plugins: [],

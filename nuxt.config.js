@@ -28,11 +28,20 @@ export default {
 
     // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
     buildModules: [
-    // https://go.nuxtjs.dev/eslint
+        // https://go.nuxtjs.dev/eslint
         '@nuxtjs/eslint-module',
+        
         // https://go.nuxtjs.dev/tailwindcss
         '@nuxtjs/tailwindcss',
+
+        '@nuxtjs/google-fonts'
     ],
+
+    googleFonts: {
+        families: {
+            Inter: [100, 200, 300, 400, 500, 600, 700, 800, 900]
+        }
+    },
 
     // Modules (https://go.nuxtjs.dev/config-modules)
     modules: [

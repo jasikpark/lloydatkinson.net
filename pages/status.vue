@@ -137,8 +137,8 @@
                     font-black
                 </li>
 
-                <li class="font-sans">
-                    font-sans
+                <li class="italic">
+                    italic
                 </li>
 
                 <li class="font-open-sans">
