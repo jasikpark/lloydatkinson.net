@@ -57,7 +57,95 @@
             </button>
         </section>
 
-        <p class="font-sans">hello</p>
+        <section>
+            <h3>Fonts</h3>
+
+            <ul>
+                <li class="text-xs">
+                    text-xs
+                </li>
+
+                <li class="text-sm">
+                    text-sm
+                </li>
+
+                <li class="text-base">
+                    text-base
+                </li>
+
+                <li class="text-lg">
+                    text-lg
+                </li>
+
+                <li class="text-xl">
+                    text-xl
+                </li>
+
+                <li class="text-2xl">
+                    text-2xl
+                </li>
+
+                <li class="text-3xl">
+                    text-3xl
+                </li>
+
+                <li class="text-4xl">
+                    text-4xl
+                </li>
+
+                <li class="text-5xl">
+                    text-5xl
+                </li>
+
+                <li class="text-6xl">
+                    text-6xl
+                </li>
+
+                <li class="font-hairline">
+                    font-hairline
+                </li>
+
+                <li class="font-thin">
+                    font-thin
+                </li>
+
+                <li class="font-light">
+                    font-light
+                </li>
+
+                <li class="font-normal">
+                    font-normal
+                </li>
+
+                <li class="font-medium">
+                    font-medium
+                </li>
+
+                <li class="font-semibold">
+                    font-semibold
+                </li>
+
+                <li class="font-bold">
+                    font-bold
+                </li>
+
+                <li class="font-extrabold">
+                    font-extrabold
+                </li>
+
+                <li class="font-black">
+                    font-black
+                </li>
+
+                <li class="font-sans">
+                    font-sans
+                </li>
+
+                <li class="font-open-sans">
+                    font-sans
+                </li>
+            </ul>
+        </section>
     </div>
 </template>
 
