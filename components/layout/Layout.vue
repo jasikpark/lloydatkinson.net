@@ -1,6 +1,6 @@
 <template>
     <div class="container max-w-6xl p-2 mx-auto sm:p-6">
-        <nav class="flex justify-between pb-2 text-xl border-b border-red-500 select-none sm:pb-6">
+        <nav class="flex justify-between pb-2 text-xl border-b select-none border-red-vibrant sm:pb-6">
             <slot name="header">
                 <NuxtLink to="/">
                     <span

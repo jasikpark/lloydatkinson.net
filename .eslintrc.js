@@ -22,7 +22,7 @@ module.exports = {
         indent: ['error', 4],
         'linebreak-style': 'off',
         'eol-last': ['error', 'never'],
-        'max-len': ['error', { code: 250 }],
+        'max-len': ['error', { code: 300 }],
         'space-before-function-paren': ['error', 'always'],
         'no-unused-vars': 'off',
 
