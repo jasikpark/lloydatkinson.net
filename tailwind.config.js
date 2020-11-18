@@ -7,8 +7,16 @@ module.exports = {
             'serif': [...defaultTheme.fontFamily.serif],
             'mono': [...defaultTheme.fontFamily.mono]
         },
+        extend: {
+            colors: {
+                'red-vibrant': '#ff0000'
+            }
+        }
     },
-    variants: {},
+    variants: {
+        boxShadow: ['responsive', 'hover', 'focus', 'active'],
+        backgroundColor: ['responsive', 'hover', 'focus', 'active', 'disabled'],
+    },
     plugins: [],
     // purge: {
     //     // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
