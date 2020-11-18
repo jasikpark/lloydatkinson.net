@@ -10,31 +10,33 @@
                 </h3>
             </div>
         </div>
-        <div class="flex flex-col items-center justify-center group">
-            <div>
-                <InteractivePhysics />
-            </div>
-            <!-- <DemoButton>Test Button</DemoButton> -->
-            <div class="p-10 transition duration-200 ease-in-out group hover:opacity-100">
-                <div class="space-x-4 ">
-                    <Button>
-                        Circle
-                    </Button>
+        <Feature name="Physics">
+            <div class="flex flex-col items-center justify-center group">
+                <div>
+                    <InteractivePhysics />
+                </div>
+                <!-- <DemoButton>Test Button</DemoButton> -->
+                <div class="p-10 transition duration-200 ease-in-out group hover:opacity-100">
+                    <div class="space-x-4 ">
+                        <Button>
+                            Circle
+                        </Button>
 
-                    <Button>
-                        Square
-                    </Button>
+                        <Button>
+                            Square
+                        </Button>
 
-                    <Button>
-                        Speed Up
-                    </Button>
+                        <Button>
+                            Speed Up
+                        </Button>
 
-                    <Button>
-                        Slow Down
-                    </Button>
+                        <Button>
+                            Slow Down
+                        </Button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </Feature>
     </div>
 </template>
 

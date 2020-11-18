@@ -6,7 +6,8 @@
 
 <script>
 // import * as PIXI from 'pixi.js'
-import { Engine, Render, World, Body, Bodies, Constraint } from 'matter-js';
+import { Engine, Render, World, Body, Bodies, Constraint, Matter } from 'matter-js';
+import MatterAttractors from 'matter-attractors';
 
 export default {
     name: 'InteractivePhysics',
@@ -69,6 +70,10 @@ export default {
                 wireframes: false
             }
         });
+
+        engine.world.gravity.x = 355;
+        engine.world.gravity.y = 125;
+        engine.world.gravity.isPoint = true;
 
         // context.translate(0.5, 0.5);
 

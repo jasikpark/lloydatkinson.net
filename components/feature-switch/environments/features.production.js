@@ -1,10 +1,6 @@
 export default [
     {
-        name: 'FeatureSwitchOne',
-        enabled: true
+        name: 'Physics',
+        enabled: false
     },
-    {
-        name: 'FeatureSwitchTwo',
-        enabled: true
-    }
-]
+];
