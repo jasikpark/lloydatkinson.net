@@ -17,7 +17,9 @@ module.exports = {
         boxShadow: ['responsive', 'hover', 'focus', 'active'],
         backgroundColor: ['responsive', 'hover', 'focus', 'active', 'disabled'],
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/forms'),
+    ],
     // purge: {
     //     // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
     //     enabled: !dev,

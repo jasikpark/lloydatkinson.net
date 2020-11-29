@@ -1,121 +1,151 @@
 <template>
-    <!-- <div class="flex items-center justify-center w-full max-w-3xl mx-auto ">
-        <form class="px-8 pt-6 pb-8 mb-4 bg-white rounded shadow-md">
-            <div class="mb-4">
-                <label
-                    class="block mb-2 text-sm font-bold text-gray-700"
-                    for="name">
-                    Name
-                </label>
-                <input
-                    id="name"
-                    class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                    type="text"
-                    placeholder="Name">
-            </div>
-            <div class="mb-6">
-                <label
-                    class="block mb-2 text-sm font-bold text-gray-700"
-                    for="password">
-                    Password
-                </label>
-                <input
-                    id="password"
-                    class="w-full px-3 py-2 mb-3 leading-tight text-gray-700 border border-red-500 rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                    type="password"
-                    placeholder="******************">
-                <p class="text-xs italic text-red-500">
-                    Please choose a password.
-                </p>
-            </div>
-            <div class="flex items-center justify-between">
-                <button
-                    class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline"
-                    type="button">
-                    Sign In
-                </button>
-                <a
-                    class="inline-block text-sm font-bold text-blue-500 align-baseline hover:text-blue-800"
-                    href="#">
-                    Forgot Password?
-                </a>
-            </div>
-        </form>
-    </div> -->
     <form
-        id="contact-form"
-        class="w-full max-w-3xl p-8 mx-auto text-gray-700">
+        id="contact-me"
+        name="contact-me"
+        method="post"
+        action="/thanks"
+        netlify
+        netlify-honeypot="bot-field"
+        class="w-full max-w-3xl p-8 mx-auto space-y-8 text-gray-700">
         <h2 class="mb-8 text-3xl ">
             Get in touch
         </h2>
 
-        <div class="flex flex-wrap mb-4">
-            <div class="w-full appearance-none">
-                <label
-                    for="name"
-                    class="block mb-2">
-                    Your name
-                </label>
+        <input type="hidden" name="form-name" value="contact-me" />
+        <p class="hidden">
+            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+        </p>
 
-                <input
-                    id="name"
-                    class="block w-full px-4 py-2 mb-3 leading-relaxed bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
-                    type="text"
-                    placeholder="Your name"
-                    required
-                    autocomplete="name">
-            </div>
-        </div>
+        <div class="w-full space-y-1 appearance-none">
+            <label
+                for="name"
+                class="block text-sm font-medium text-gray-700">Name</label>
 
-        <div class="flex flex-wrap mb-4">
-            <div class="w-full appearance-none">
-                <label
-                    for="email"
-                    class="block mb-2">
-                    Your E-Mail
-                </label>
+            <input
+                id="name"
+                v-model.trim="form.name"
+                class="block w-full px-4 py-2 leading-relaxed bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
+                type="text"
+                autocomplete="name">
 
-                <input
-                    id="email"
-                    class="block w-full px-4 py-2 mb-3 leading-relaxed bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
-                    type="text"
-                    placeholder="Your E-Mail"
-                    required
-                    autocomplete="email">
-            </div>
+            <p
+                v-if="form.showValidationMessage"
+                id="email-error"
+                class="text-sm text-red-600">
+                Please enter your name
+            </p>
         </div>
         
-        <div class="flex flex-wrap mb-6">
-            <div class="relative w-full appearance-none label-floating">
-                <label
-                    for="message"
-                    class="block mb-2">
-                    Message
-                </label>
+        <div class="w-full space-y-1 appearance-none h-18">
+            <label
+                for="email"
+                class="block text-sm font-medium text-gray-700">
+                E-Mail
+            </label>
 
-                <textarea
-                    id="message"
-                    rows="6"
-                    class="block w-full px-4 py-2 mb-3 leading-relaxed tracking-wide bg-gray-200 border border-gray-200 rounded appearance-none autoexpand focus:outline-none focus:bg-white focus:border-gray-500"
-                    type="text"
-                    placeholder="Message..." />
-            </div>
+            <input
+                id="email"
+                v-model.trim="form.email"
+                class="block w-full px-4 py-2 leading-relaxed bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
+                type="text"
+                autocomplete="email">
+
+            <p
+                v-if="form.showValidationMessage"
+                id="email-error"
+                class="text-sm text-red-600">
+                Please enter a valid email address
+            </p>
         </div>
 
-        <Button block>
+        <div class="w-full space-y-1 appearance-none label-floating">
+            <label
+                for="message"
+                class="block text-sm font-medium text-gray-700">Message</label>
+
+            <textarea
+                id="message"
+                v-model.trim="form.message"
+                rows="6"
+                class="block w-full px-4 py-2 leading-relaxed tracking-wide bg-gray-200 border border-gray-200 rounded appearance-none autoexpand focus:outline-none focus:bg-white focus:border-gray-500"
+                type="text" />
+
+            <p
+                v-if="form.showValidationMessage"
+                id="message-error"
+                class="text-sm text-red-600">
+                Please enter your message
+            </p>
+        </div>
+
+        <Button
+            block
+            type="submit">
             Send
         </Button>
-
-            <!-- <button
-                class="w-full px-4 py-2 font-bold text-white bg-teal-400 rounded shadow hover:bg-teal-400 focus:shadow-outline focus:outline-none"
-                type="submit">
-                Send
-            </button> -->
     </form>
 </template>
 
 <script>
+import isLength from 'validator/lib/isAlpha';
+import isAlpha from 'validator/lib/isAlpha';
+import isEmail from 'validator/lib/isEmail';
+
 export default {
-    name: 'ContactForm'
+    name: 'ContactForm',
+
+    data () {
+        return {
+            form: {
+                name: '',
+                email: '',
+                message: '',
+                showValidationMessage: false,
+            }
+        };
+    },
+
+    computed: {
+        isValidForm () {
+            const { name, email, message } = this.form;
+
+            // const a = isAlpha;
+            // const b = isEmail;
+            
+
+            // const valid =
+            //     isLength(name)
+            //     && isEmail(email)
+            //     && isAlpha(message);
+            // debugger;
+            // return valid;
+
+            const valid =
+                name.length > 0
+                && email.length > 0
+                && message.length > 0;
+
+            return valid;
+        },
+    },
+
+    methods: {
+        submit (event) {
+            const { name, email, message } = this.form;
+            console.log({ name, email, message });
+
+            event.preventDefault()
+
+            if (!this.isValidForm) {
+                this.form.showValidationMessage = true;
+
+                return false;
+            } else {
+                this.form.showValidationMessage = false;
+
+                return true;
+            }
+        }
+    }
 };
 </script>
