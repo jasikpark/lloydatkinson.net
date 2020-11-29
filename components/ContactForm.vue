@@ -27,7 +27,8 @@
                 name="name"
                 class="block w-full px-4 py-2 leading-relaxed bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
                 type="text"
-                autocomplete="name">
+                autocomplete="name"
+                required>
         </div>
         
         <div class="w-full space-y-1 appearance-none h-18">
@@ -42,20 +43,24 @@
                 name="email"
                 class="block w-full px-4 py-2 leading-relaxed bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
                 type="text"
-                autocomplete="email">
+                autocomplete="email"
+                required>
         </div>
 
         <div class="w-full space-y-1 appearance-none label-floating">
             <label
                 for="message"
-                class="block text-sm font-medium text-gray-700">Message</label>
+                class="block text-sm font-medium text-gray-700">
+                Message
+            </label>
 
             <textarea
                 id="message"
                 name="message"
                 rows="6"
                 class="block w-full px-4 py-2 leading-relaxed tracking-wide bg-gray-200 border border-gray-200 rounded appearance-none autoexpand focus:outline-none focus:bg-white focus:border-gray-500"
-                type="text" />
+                type="text"
+                required />
         </div>
 
         <Button
