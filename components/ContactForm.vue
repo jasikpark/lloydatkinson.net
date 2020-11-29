@@ -1,7 +1,7 @@
 <template>
     <form
-        id="contact-me"
-        name="contact-me"
+        id="contact-me-form"
+        name="contact-me-form"
         method="post"
         action="/thanks"
         netlify
@@ -11,7 +11,7 @@
             Get in touch
         </h2>
 
-        <input type="hidden" name="form-name" value="contact-me" />
+        <input type="hidden" name="form-name" value="contact-me-form" />
 
         <p class="hidden">
             <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
