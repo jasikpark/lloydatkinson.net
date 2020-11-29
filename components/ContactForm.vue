@@ -24,18 +24,10 @@
 
             <input
                 id="name"
-                v-model.trim="form.name"
                 name="name"
                 class="block w-full px-4 py-2 leading-relaxed bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
                 type="text"
                 autocomplete="name">
-
-            <p
-                v-if="form.showValidationMessage"
-                id="email-error"
-                class="text-sm text-red-600">
-                Please enter your name
-            </p>
         </div>
         
         <div class="w-full space-y-1 appearance-none h-18">
@@ -47,18 +39,10 @@
 
             <input
                 id="email"
-                v-model.trim="form.email"
                 name="email"
                 class="block w-full px-4 py-2 leading-relaxed bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
                 type="text"
                 autocomplete="email">
-
-            <p
-                v-if="form.showValidationMessage"
-                id="email-error"
-                class="text-sm text-red-600">
-                Please enter a valid email address
-            </p>
         </div>
 
         <div class="w-full space-y-1 appearance-none label-floating">
@@ -69,17 +53,9 @@
             <textarea
                 id="message"
                 name="message"
-                v-model.trim="form.message"
                 rows="6"
                 class="block w-full px-4 py-2 leading-relaxed tracking-wide bg-gray-200 border border-gray-200 rounded appearance-none autoexpand focus:outline-none focus:bg-white focus:border-gray-500"
                 type="text" />
-
-            <p
-                v-if="form.showValidationMessage"
-                id="message-error"
-                class="text-sm text-red-600">
-                Please enter your message
-            </p>
         </div>
 
         <Button
@@ -89,67 +65,3 @@
         </Button>
     </form>
 </template>
-
-<script>
-import isLength from 'validator/lib/isAlpha';
-import isAlpha from 'validator/lib/isAlpha';
-import isEmail from 'validator/lib/isEmail';
-
-export default {
-    name: 'ContactForm',
-
-    data () {
-        return {
-            form: {
-                name: '',
-                email: '',
-                message: '',
-                showValidationMessage: false,
-            }
-        };
-    },
-
-    computed: {
-        isValidForm () {
-            const { name, email, message } = this.form;
-
-            // const a = isAlpha;
-            // const b = isEmail;
-            
-
-            // const valid =
-            //     isLength(name)
-            //     && isEmail(email)
-            //     && isAlpha(message);
-            // debugger;
-            // return valid;
-
-            const valid =
-                name.length > 0
-                && email.length > 0
-                && message.length > 0;
-
-            return valid;
-        },
-    },
-
-    methods: {
-        submit (event) {
-            const { name, email, message } = this.form;
-            console.log({ name, email, message });
-
-            event.preventDefault()
-
-            if (!this.isValidForm) {
-                this.form.showValidationMessage = true;
-
-                return false;
-            } else {
-                this.form.showValidationMessage = false;
-
-                return true;
-            }
-        }
-    }
-};
-</script>
