@@ -47,17 +47,14 @@
                     {{ feature.name }}: {{ feature.enabled }}
                 </li>
             </ul>
-
-            <button @click="setFeatureAvailability({ name: 'FeatureSwitchOne', enabled: true })">
-                FeatureSwitchOne on
-            </button>
-
-            <button @click="setFeatureAvailability({ name: 'FeatureSwitchOne', enabled: false })">
-                FeatureSwitchOne off
-            </button>
         </section>
 
-        <section>
+        <section class="flex justify-between">
+            <TextField />
+            <Button>Button</Button>
+        </section>
+
+        <!-- <section>
             <h3>Fonts</h3>
 
             <ul>
@@ -145,7 +142,7 @@
                     font-sans
                 </li>
             </ul>
-        </section>
+        </section> -->
     </div>
 </template>
 

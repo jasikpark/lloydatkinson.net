@@ -47,6 +47,8 @@ module.exports = {
             multiline: 'never'
         }],
 
+        'vue/no-unused-components': 'off',
+
         'import/extensions': 'off',
         // Latest version of ESLint seems to have turned these deprecated rules back on so turning them off for now.
         'no-spaced-func': 'off',
