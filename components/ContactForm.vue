@@ -12,6 +12,7 @@
         </h2>
 
         <input type="hidden" name="form-name" value="contact-me" />
+
         <p class="hidden">
             <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
         </p>
@@ -24,6 +25,7 @@
             <input
                 id="name"
                 v-model.trim="form.name"
+                name="name"
                 class="block w-full px-4 py-2 leading-relaxed bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
                 type="text"
                 autocomplete="name">
@@ -46,6 +48,7 @@
             <input
                 id="email"
                 v-model.trim="form.email"
+                name="email"
                 class="block w-full px-4 py-2 leading-relaxed bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
                 type="text"
                 autocomplete="email">
@@ -65,6 +68,7 @@
 
             <textarea
                 id="message"
+                name="message"
                 v-model.trim="form.message"
                 rows="6"
                 class="block w-full px-4 py-2 leading-relaxed tracking-wide bg-gray-200 border border-gray-200 rounded appearance-none autoexpand focus:outline-none focus:bg-white focus:border-gray-500"
