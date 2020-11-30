@@ -28,15 +28,23 @@ export default {
 
     // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
     buildModules: [
-        // https://go.nuxtjs.dev/eslint
         '@nuxtjs/eslint-module',
-        
-        // https://go.nuxtjs.dev/tailwindcss
         '@nuxtjs/tailwindcss',
-
-        '@nuxtjs/google-fonts'
+        '@nuxtjs/google-fonts',
+        '@nuxtjs/google-analytics'
     ],
 
+    
+    // Modules (https://go.nuxtjs.dev/config-modules)
+    modules: [
+        // https://go.nuxtjs.dev/axios
+        '@nuxtjs/axios',
+        // https://go.nuxtjs.dev/pwa
+        '@nuxtjs/pwa',
+        // https://go.nuxtjs.dev/content
+        '@nuxt/content',
+    ],
+    
     googleFonts: {
         families: {
             Inter: [100, 200, 300, 400, 500, 600, 700, 800, 900]
@@ -45,15 +53,9 @@ export default {
         display: 'fallback',
     },
 
-    // Modules (https://go.nuxtjs.dev/config-modules)
-    modules: [
-    // https://go.nuxtjs.dev/axios
-        '@nuxtjs/axios',
-        // https://go.nuxtjs.dev/pwa
-        '@nuxtjs/pwa',
-        // https://go.nuxtjs.dev/content
-        '@nuxt/content',
-    ],
+    googleAnalytics: {
+        id: 'UA-148006071-1'
+    },
 
     // Axios module configuration (https://go.nuxtjs.dev/config-axios)
     axios: {},
