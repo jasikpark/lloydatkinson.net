@@ -10,6 +10,7 @@
                     </span>
                 </NuxtLink>
             </slot>
+
             <div class="flex space-x-12">
                 <slot name="navigation-menu">
                     <div class="hidden sm:block">
@@ -35,17 +36,19 @@
                 <slot name="navigation-icons">
                     <ul class="flex items-center space-x-4">
                         <li>
-                            <svg
-                                class="w-6 h-6 text-gray-700"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                            </svg>
+                            <NavigationLink to="/contact">
+                                <svg
+                                    class="w-6 h-6 text-gray-700"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </NavigationLink>
                         </li>
                         <li>
                             <svg
@@ -79,6 +82,8 @@
 import confetti from 'canvas-confetti'
 
 export default {
+    name: 'Layout',
+
     data () {
         return {
             navigationMenuOpened: false

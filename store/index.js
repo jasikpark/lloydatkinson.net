@@ -1,6 +1,5 @@
-import { loadFeatureSwitches, defineFeatureSwitches } from '../components/feature-switch/feature-switch';
-
-import FeatureSwitchModule from '../components/feature-switch/store/module';
+import { loadFeatureSwitches, defineFeatureSwitches } from '../components/features/feature-switch/feature-switch';
+import FeatureSwitchModule from '../components/features/feature-switch/store/module';
 
 export const modules = {
     FeatureSwitchModule

@@ -6,15 +6,18 @@
         action="/thanks"
         netlify
         netlify-honeypot="bot-field"
-        class="w-full max-w-3xl p-8 mx-auto space-y-8 text-gray-700">
+        class="w-full max-w-3xl mx-auto space-y-8 text-gray-700">
         <h2 class="mb-8 text-3xl ">
             Get in touch
         </h2>
 
-        <input type="hidden" name="form-name" value="contact-me-form" />
+        <input
+            type="hidden"
+            name="form-name"
+            value="contact-me-form">
 
         <p class="hidden">
-            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+            <label>Don’t fill this out if you're human: <input name="bot-field"></label>
         </p>
 
         <div class="w-full space-y-1 appearance-none">
@@ -70,3 +73,9 @@
         </Button>
     </form>
 </template>
+
+<script>
+export default {
+    name: 'ContactForm',
+}
+</script>
