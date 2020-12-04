@@ -42,6 +42,8 @@
 
 <script>
 export default {
-
+    data () {
+        test: this.$content
+    }
 }
 </script>
