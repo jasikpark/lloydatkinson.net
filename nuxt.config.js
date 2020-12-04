@@ -11,7 +11,7 @@ export default {
             { hid: 'description', name: 'description', content: 'Lloyd Atkinson - Software Developer and Maker' }
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/static/favicon.ico' }
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
         ]
     },
 
