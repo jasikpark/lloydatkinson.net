@@ -39,7 +39,7 @@ module.exports = {
             attribute: 1,
             closeBracket: 0,
             alignAttributesVertically: true,
-            ignores: []
+            ignores: ['NuxtLink', 'nuxt-link']
         }],
 
         'vue/html-closing-bracket-newline': ['error', {

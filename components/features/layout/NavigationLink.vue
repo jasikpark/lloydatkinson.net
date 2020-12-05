@@ -4,7 +4,7 @@
         :to="to">
         <a
             :href="href"
-            class="cursor-pointer hover:text-gray-900"
+            class="inline-block cursor-pointer hover:text-gray-900"
             :class="[ isActive ? style.active : style.inactive ]"
             @click="navigate">
             <slot>{{ to }}</slot>

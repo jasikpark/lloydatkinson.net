@@ -17,11 +17,13 @@
             </section>
 
             <section>
-                Checkout my <NuxtLink to="/articles">
+                Checkout my <NavigationLink to="/articles">
                     Articles
-                </NuxtLink> and <NuxtLink to="/articles">
+                </NavigationLink>
+                and
+                <NavigationLink to="/articles">
                     Projects
-                </NuxtLink>.
+                </NavigationLink>.
             </section>
             
             <section>
