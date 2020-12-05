@@ -33,7 +33,7 @@
                         <div class="flex space-x-4">
                             <NavigationLink to="/contact">
                                 <svg
-                                    class="w-6 h-6 text-gray-700 cursor-pointer"
+                                    class="w-6 h-6 text-gray-700 cursor-pointer hover:text-red-600"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor">
