@@ -39,11 +39,3 @@
         </Feature>
     </div>
 </template>
-
-<script>
-export default {
-    data () {
-        test: this.$content
-    }
-}
-</script>

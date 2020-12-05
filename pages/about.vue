@@ -17,7 +17,11 @@
             </section>
 
             <section>
-                Checkout my <NuxtLink to="/articles">Articles</NuxtLink> and <NuxtLink to="/articles">Projects</NuxtLink>.
+                Checkout my <NuxtLink to="/articles">
+                    Articles
+                </NuxtLink> and <NuxtLink to="/articles">
+                    Projects
+                </NuxtLink>.
             </section>
             
             <section>
@@ -33,7 +37,6 @@
                     👌
                 </p>
             </section>
-
         </div>
         <!-- <div class="space-y-6">
             <div class="space-y-6">
