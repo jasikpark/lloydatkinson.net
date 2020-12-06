@@ -4,7 +4,7 @@
             Articles
         </h2>
         <div>
-            <ul class="divide-y divide-gray-200">
+            <ul class="divide-y divide-gray-200">   
                 <li
                     v-for="article of articles"
                     :key="article.slug"
@@ -13,7 +13,22 @@
                         {{ article.title }}
                     </p>
                     <p>{{ article.description }}</p>
-                    <p>{{ article.createdAt }}</p>                    
+                    <p>{{ article.createdAt }}</p>
+
+                    <ul class="flex flex-row space-x-1">
+                        <li
+                            v-for="tag in article.tags"
+                            :key="tag"
+                            class="inline-flex items-center px-2 py-1 text-xs font-medium text-gray-800 bg-gray-200 rounded-full">
+                            {{ tag }}
+                        </li>
+                    </ul>
+                    <!-- <p
+                        v-for="tag in article.tags"
+                        :key="tag"
+                        class="inline-flex items-center px-2 py-1 text-xs font-medium text-gray-800 bg-gray-200 rounded-full">
+                        {{ tag }}
+                    </p> -->
                 </li>
             </ul>
         </div>
@@ -25,7 +40,7 @@ export default {
     async asyncData ({ $content, params }) {
         
         const articles = await $content('articles')
-            .only(['title', 'description', 'slug', 'createdAt'])
+            .only(['title', 'description', 'tags', 'slug', 'createdAt'])
             .sortBy('createdAt', 'asc')
             .fetch();
 

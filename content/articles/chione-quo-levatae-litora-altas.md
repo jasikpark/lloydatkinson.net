@@ -1,7 +1,10 @@
 ---
 title: Chione quo levatae litora altas
-description: Mox paulum pectore
-virtus naides plangitur petis mea e adhuc cepit lapsum et tenebrae licet reminiscitur inpar, in.
+description: Mox paulum pectore virtus naides plangitur petis mea e adhuc cepit lapsum et tenebrae licet reminiscitur inpar, in.
+tags:
+    - csharp
+    - fsharp
+    - javascript
 ---
 
 # Lata qui squalidus bellis quoque facta
