@@ -6,7 +6,7 @@
                     <div class="flex">
                         <div class="flex items-center justify-center flex-shrink-0">
                             <NuxtLink to="/">
-                                Lloyd Atkinson
+                                Lloyd Atkinson 🎄🎅⛄❄
                             </NuxtLink>
                         </div>
                     </div>
