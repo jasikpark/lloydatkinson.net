@@ -4,7 +4,7 @@
             Articles
         </h2>
         <div>
-            <ul class="divide-y divide-gray-200">   
+            <ul class="divide-y divide-gray-300">   
                 <li
                     v-for="article of articles"
                     :key="article.slug"
@@ -41,6 +41,7 @@ export default {
         
         const articles = await $content('articles')
             .only(['title', 'description', 'tags', 'slug', 'createdAt'])
+            .where({ published: { $eq: true }})
             .sortBy('createdAt', 'asc')
             .fetch();
 
