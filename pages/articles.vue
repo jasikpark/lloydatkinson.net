@@ -9,20 +9,24 @@
                     v-for="article of articles"
                     :key="article.slug"
                     class="py-6">
-                    <p class="text-xl">
+                    <p class="text-xl text-gray-900">
                         {{ article.title }}
                     </p>
-                    <p>{{ article.description }}</p>
-                    <p>{{ article.createdAt }}</p>
+                    <p class="text-base text-gray-800">
+                        {{ article.description }}
+                    </p>
+                    <!-- <p class="text-gray-800">
+                        {{ article.createdAt }}
+                    </p> -->
 
-                    <ul class="flex flex-row space-x-1">
+                    <!-- <ul class="flex flex-row space-x-1">
                         <li
                             v-for="tag in article.tags"
                             :key="tag"
                             class="inline-flex items-center px-2 py-1 text-xs font-medium text-gray-800 bg-gray-200 rounded-full">
                             {{ tag }}
                         </li>
-                    </ul>
+                    </ul> -->
                     <!-- <p
                         v-for="tag in article.tags"
                         :key="tag"
@@ -46,7 +50,6 @@ export default {
             .fetch();
 
         return {
-            params,
             articles,
         };
     }
