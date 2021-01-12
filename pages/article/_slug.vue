@@ -2,7 +2,7 @@
     <div>
         <article>
             <nuxt-content
-                class="prose"
+                class="prose max-w-none"
                 :document="article" />
         </article>
     </div>
