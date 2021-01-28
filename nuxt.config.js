@@ -31,7 +31,8 @@ export default {
         '@nuxtjs/eslint-module',
         '@nuxtjs/tailwindcss',
         '@nuxtjs/google-fonts',
-        '@nuxtjs/google-analytics'
+        '@nuxtjs/google-analytics',
+        '@nuxtjs/netlify-files',
     ],
 
     
@@ -73,5 +74,9 @@ export default {
         buildContext: process.env.CONTEXT,
         buildDateTime: new Date().toISOString(),
         dev: process.env.NODE_ENV !== 'production'
-    }
-}
+    },
+
+    generate: {
+        fallback: true,
+    },
+};

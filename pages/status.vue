@@ -49,11 +49,6 @@
             </ul>
         </section>
 
-        <section class="flex justify-between">
-            <TextField />
-            <Button>Button</Button>
-        </section>
-
         <!-- <section>
             <h3>Fonts</h3>
 
