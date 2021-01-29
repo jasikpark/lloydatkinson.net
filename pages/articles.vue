@@ -3,6 +3,9 @@
         <h2 class="mb-8 text-3xl text-center">
             Articles
         </h2>
+        <NavigationLink to="/article/first-post">
+            Test
+        </NavigationLink>
         <div>
             <ul class="divide-y divide-gray-300">   
                 <li
