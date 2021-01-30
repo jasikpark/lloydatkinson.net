@@ -12,12 +12,14 @@
                     v-for="article of articles"
                     :key="article.slug"
                     class="py-6">
-                    <p class="text-xl text-gray-900">
-                        {{ article.title }}
-                    </p>
-                    <p class="text-base text-gray-800">
-                        {{ article.description }}
-                    </p>
+                    <NavigationLink :to="`/article/${article.slug}`">
+                        <p class="text-xl text-gray-900">
+                            {{ article.title }}
+                        </p>
+                        <p class="text-base text-gray-800">
+                            {{ article.description }}
+                        </p>
+                    </NavigationLink>
                     <!-- <p class="text-gray-800">
                         {{ article.createdAt }}
                     </p> -->
@@ -47,7 +49,7 @@ export default {
     async asyncData ({ $content, params }) {
         
         const articles = await $content('articles')
-            .only(['title', 'description', 'tags', 'slug', 'createdAt'])
+            .only(['title', 'description', 'tags', 'slug', 'path', 'createdAt'])
             .where({ published: { $eq: true }})
             .sortBy('createdAt', 'asc')
             .fetch();
