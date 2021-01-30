@@ -46,7 +46,7 @@
                             </NavigationLink>
 
                             <a
-                                rel="noopener noreferrer"
+                                rel="nofollow noopener noreferrer"
                                 target="_blank"
                                 href="https://github.com/lloydjatkinson">
                                 <svg
