@@ -3,9 +3,6 @@
         <h2 class="mb-8 text-3xl text-center">
             Articles
         </h2>
-        <NavigationLink to="/article/first-post">
-            Test
-        </NavigationLink>
         <div>
             <ul class="divide-y divide-gray-300">   
                 <li
@@ -51,7 +48,7 @@ export default {
         const articles = await $content('articles')
             .only(['title', 'description', 'tags', 'slug', 'path', 'createdAt'])
             .where({ published: { $eq: true }})
-            .sortBy('createdAt', 'asc')
+            .sortBy('createdAt', 'desc')
             .fetch();
 
         return {
