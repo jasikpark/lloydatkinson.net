@@ -16,7 +16,7 @@ export default {
         tsParticles.load('tsparticles', {
             particles: {
                 number: {
-                    value: 12,
+                    value: 10,
                     density: {
                         enable: false,
                         value_area: 800
