@@ -12,8 +12,8 @@ import { tsParticles } from 'tsparticles';
 
 export default {
     
-    mounted () {  
-        tsParticles.load("tsparticles", {
+    mounted () {        
+        tsParticles.load('tsparticles', {
             particles: {
                 number: {
                     value: 6,
@@ -33,7 +33,7 @@ export default {
                     ]
                 },
                 shape: {
-                    type: 'circle',
+                    type: "circle",
                     stroke: {
                         width: 0,
                         color: "#000"
@@ -69,6 +69,20 @@ export default {
                     opacity: 1,
                     width: 2
                 },
+                move: {
+                    enable: true,
+                    speed: 0.5,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "bounce",
+                    bounce: true,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
             },
             retina_detect: true
         });
