@@ -186,7 +186,7 @@
         <div class="py-8 sm:py-16">
             <main>
                 <div class="sm:px-12">
-                    <div class="py-8">
+                    <div class="">
                         <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe corrupti doloribus facere consequatur ducimus sint itaque iste corporis obcaecati labore, in est nam odit nostrum accusantium eos optio rerum nemo. -->
                         <slot />
                     </div>

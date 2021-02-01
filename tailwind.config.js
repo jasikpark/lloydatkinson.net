@@ -10,8 +10,11 @@ module.exports = {
         extend: {
             colors: {
                 'red-vibrant': '#ff0000'
-            }
-        }
+            },
+            spacing: {
+                'box-tall': '30rem',
+            },
+        },
     },
     variants: {
         boxShadow: ['responsive', 'hover', 'focus', 'active'],
