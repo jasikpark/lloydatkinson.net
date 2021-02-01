@@ -1,7 +1,7 @@
 <template>
-    <div class="hero-body">
+    <div class="particle-container">
         <div id="tsparticles" />
-        <div class="z-10">
+        <div class="">
             <slot />
         </div>
     </div>
@@ -12,27 +12,7 @@ import { tsParticles } from 'tsparticles';
 
 export default {
     
-    mounted () {
-        // tsParticles.load("tsparticles", {
-        //     fpsLimit: 60,
-        //     particles: {
-        //         links: {
-        //             enable: true,
-        //             distance: 50
-        //         },
-        //         move: {
-        //             enable: true,
-        //             speed: 0.5,
-        //             outModes: {
-        //                 default: "bounce"
-        //             }
-        //         },
-        //         size: {
-        //             value: 5
-        //         }
-        //     }
-        // });
-        
+    mounted () {  
         tsParticles.load("tsparticles", {
             particles: {
                 number: {
@@ -43,10 +23,17 @@ export default {
                     }
                 },
                 color: {
-                    value: "#DC2626"
+                    // value: "#DC2626"
+                    value: [
+                        '#3B82F6',
+                        '#DC2626',
+                        '#FBBF24',
+                        '#10B981',
+                        '#DB2777',
+                    ]
                 },
                 shape: {
-                    type: "circle",
+                    type: 'circle',
                     stroke: {
                         width: 0,
                         color: "#000"
@@ -61,7 +48,7 @@ export default {
                     anim: {
                         enable: false,
                         speed: 1,
-                        opacity_min: 0.1,
+                        opacity_min: 0.3,
                         sync: false
                     }
                 },
@@ -70,7 +57,7 @@ export default {
                     random: false,
                     anim: {
                         enable: true,
-                        speed: 10,
+                        speed: 8,
                         size_min: 40,
                         sync: false
                     }
@@ -82,59 +69,6 @@ export default {
                     opacity: 1,
                     width: 2
                 },
-                move: {
-                    enable: true,
-                    speed: 0.5,
-                    direction: "none",
-                    random: true,
-                    straight: false,
-                    out_mode: "bounce",
-                    bounce: true,
-                    attract: {
-                        enable: false,
-                        rotateX: 600,
-                        rotateY: 1200
-                    }
-                }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: {
-                        enable: false,
-                        mode: "grab"
-                    },
-                    onclick: {
-                        enable: false,
-                        mode: "push"
-                    },
-                    resize: true
-                },
-                modes: {
-                    grab: {
-                        distance: 400,
-                        line_linked: {
-                            opacity: 1
-                        }
-                    },
-                    bubble: {
-                        distance: 400,
-                        size: 40,
-                        duration: 2,
-                        opacity: 8,
-                        speed: 3
-                    },
-                    repulse: {
-                        distance: 200,
-                        duration: 0.4
-                    },
-                    push: {
-                        particles_nb: 4
-                    },
-                    remove: {
-                        particles_nb: 2
-                    }
-                }
             },
             retina_detect: true
         });
@@ -144,7 +78,7 @@ export default {
 </script>
 
 <style>
-.hero-body {
+.particle-container {
   position: relative;
 }
 
