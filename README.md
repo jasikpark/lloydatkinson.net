@@ -1,5 +1,7 @@
 # lloydatkinson.net
 
+![build](https://github.com/lloydjatkinson/lloydatkinson.net/workflows/build/badge.svg)
+
 ## Build Setup
 
 ```bash
