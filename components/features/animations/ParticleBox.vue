@@ -48,7 +48,7 @@ export default {
                     value: 0.7,
                     random: true,
                     anim: {
-                        enable: false,
+                        enable: true,
                         speed: 1,
                         opacity_min: 0.3,
                         sync: false
