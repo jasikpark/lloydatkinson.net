@@ -59,8 +59,8 @@ export default {
                     random: false,
                     anim: {
                         enable: true,
-                        speed: 8,
-                        size_min: 40,
+                        speed: 5,
+                        size_min: 25,
                         sync: false
                     }
                 },
