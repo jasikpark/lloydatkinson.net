@@ -6,7 +6,6 @@
         action="/thanks"
         netlify
         netlify-honeypot="bot-field"
-        netlify-recaptcha="true"
         class="w-full max-w-3xl mx-auto space-y-8 text-gray-700">
         <h2 class="mb-8 text-3xl ">
             Get in touch
@@ -67,8 +66,6 @@
                 required />
         </div>
 
-        <div data-netlify-recaptcha="true"></div>
-
         <Button
             block
             type="submit">
@@ -80,5 +77,7 @@
 <script>
 export default {
     name: 'ContactForm',
+    
+    
 }
 </script>
