@@ -1,7 +1,7 @@
 <template>
-    <div class="particle-container">
+    <div class="relative">
         <div id="tsparticles" />
-        <div class="">
+        <div class="relative">
             <slot />
         </div>
     </div>
@@ -45,12 +45,12 @@ export default {
                     },
                 },
                 opacity: {
-                    value: 0.7,
+                    value: 1,
                     random: true,
                     anim: {
                         enable: false,
                         speed: 1,
-                        opacity_min: 0.4,
+                        opacity_min: 0.6,
                         sync: false
                     }
                 },
@@ -95,7 +95,7 @@ export default {
 
 <style>
 .particle-container {
-  position: relative;
+    position: relative;
 }
 
 #tsparticles {
