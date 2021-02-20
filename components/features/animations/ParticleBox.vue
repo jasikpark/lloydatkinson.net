@@ -1,7 +1,7 @@
 <template>
     <div class="particle-container">
         <div id="tsparticles" />
-        <div class="">
+        <div class="relative">
             <slot />
         </div>
     </div>
