@@ -3,7 +3,7 @@
         <h2 class="mb-8 text-3xl text-center">
             Articles
         </h2>
-        <div>
+        <div v-if="articles.length > 0">
             <ul class="divide-y divide-gray-300">   
                 <li
                     v-for="article of articles"
@@ -38,6 +38,7 @@
                 </li>
             </ul>
         </div>
+        <CheckBackSoon v-else />
     </div>
 </template>
 
@@ -54,6 +55,12 @@ export default {
         return {
             articles,
         };
-    }
+    },
+    
+    head () {
+        return {
+            title: 'Articles',
+        };
+    },
 }
 </script>

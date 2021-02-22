@@ -24,3 +24,13 @@
         </div>
     </ParticleBox>
 </template>
+
+<script>
+export default {
+    head () {
+        return {
+            title: 'Software Developer and Maker'
+        }
+    },
+}
+</script>

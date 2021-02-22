@@ -1,5 +1,8 @@
 <template>
     <div>
+        <MetaSocialHead
+            :title="article.title"
+            :description="article.description" />
         <header>
             <h2 class="mb-8 text-3xl text-center">
                 {{ article.title }}

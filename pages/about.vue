@@ -63,8 +63,12 @@
     </div>
 </template>
 
-<style>
-.filter-grayscale {
-    filter: grayscale(1);
+<script>
+export default {
+    head () {
+        return {
+            title: 'About'
+        }
+    },
 }
-</style>
+</script>
