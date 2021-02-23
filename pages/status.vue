@@ -3,6 +3,13 @@
         <section>
             <h3>Branch</h3>
             <p class="font-mono">
+                {{ $config.url }}
+            </p>
+        </section>
+
+        <section>
+            <h3>Branch</h3>
+            <p class="font-mono">
                 {{ $config.gitBranch }}
             </p>
         </section>

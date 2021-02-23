@@ -10,6 +10,7 @@
         </div>
     </div> -->
     <ParticleBox>
+        <img src="~/assets/minimal-plant-1.jpg">
         <div class="z-10 h-box-tall">
             <div class="flex items-center justify-center h-full">
                 <div class="text-center">

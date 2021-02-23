@@ -9,17 +9,20 @@ export default {
     props: {
         title: {
             type: String,
-            required: true
+            required: true,
         },
+
         description: {
             type: String,
-            required: true
+            required: true,
         },
+
         image: {
             type: String,
             required: false,
-            default: '/assets/minimal-plant-1.jpg'
-        }
+            // default: '~/assets/minimal-plant-1.jpg'
+            default: `${$config.url}/assets/minimal-plant-1.jpg`,
+        },
     },
 
     head () {
