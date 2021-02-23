@@ -18,7 +18,7 @@ export default {
         image: {
             type: String,
             required: false,
-            default: 'https://nuxtjs.org/nuxt-card.png'
+            default: '/assets/minimal-plant-1.jpg'
         }
     },
 
