@@ -1,0 +1,1 @@
+export { default as apaStyleCasing } from './apa-style-casing';

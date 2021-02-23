@@ -1,3 +1,5 @@
+import { apaStyleCasing } from './utilities/typography';
+
 export default {
     // Target (https://go.nuxtjs.dev/config-target)
     target: 'static',
@@ -52,6 +54,14 @@ export default {
         // https://go.nuxtjs.dev/content
         '@nuxt/content',
     ],
+
+    hooks: {
+        'content:file:beforeInsert': (document) => {
+            if (document.extension === '.md') {
+                document.title = apaStyleCasing(document.title);
+            }
+        }
+    },
     
     googleFonts: {
         families: {

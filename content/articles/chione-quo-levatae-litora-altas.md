@@ -7,7 +7,7 @@ tags:
     - csharp
     - fsharp
     - javascript
-published: false
+published: true
 ---
 
 # Lata qui squalidus bellis quoque facta
