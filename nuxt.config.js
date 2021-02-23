@@ -96,4 +96,6 @@ export default {
     generate: {
         fallback: true,
     },
+
+    modern: 'client',
 };
