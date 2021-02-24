@@ -21,8 +21,15 @@ export default {
             type: String,
             required: false,
             // default: '~/assets/minimal-plant-1.jpg'
-            default: `${$config.url}/assets/minimal-plant-1.jpg`,
+            // default: this.imageDefaultUrl,
+            default: '/minimal-plant-1.jpg',
         },
+    },
+
+    data () {
+        return {
+            imageDefaultUrl: `${$config.url}/assets/minimal-plant-1.jpg`,
+        }
     },
 
     head () {
@@ -76,6 +83,6 @@ export default {
                 }
             ]
         }
-    }
+    },
 }
 </script>
