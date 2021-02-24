@@ -87,6 +87,7 @@ export default {
 
     publicRuntimeConfig: {
         url: process.env.URL,
+        deployUrl: process.env.DEPLOY_URL,
         gitBranch: process.env.BRANCH,
         gitCommit: process.env.COMMIT_REF,
         buildContext: process.env.CONTEXT,

@@ -1,7 +1,14 @@
 <template>
     <div class="space-y-10">
         <section>
-            <h3>Branch</h3>
+            <h3>URL</h3>
+            <p class="font-mono">
+                {{ $config.url }}
+            </p>
+        </section>
+
+        <section>
+            <h3>Deploy URL</h3>
             <p class="font-mono">
                 {{ $config.url }}
             </p>
