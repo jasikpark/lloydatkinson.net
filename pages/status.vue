@@ -10,7 +10,7 @@
         <section>
             <h3>Deploy URL</h3>
             <p class="font-mono">
-                {{ $config.url }}
+                {{ $config.deployUrl }}
             </p>
         </section>
 
