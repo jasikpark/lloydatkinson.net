@@ -24,12 +24,6 @@ export default {
         },
     },
 
-    data () {
-        return {
-            imageDefaultUrl: `${this.$config.url}/images/minimal-plant-1.jpg`,
-        }
-    },
-
     head () {
         return {
             title: this.title,
@@ -80,6 +74,14 @@ export default {
                     content: this.title
                 }
             ]
+        }
+    },
+
+    computed: {
+        imageUrl () {
+            return this.image === ''
+                ? `${this.$config.url}/images/minimal-plant-1.jpg`
+                : this.image;
         }
     },
 }
