@@ -86,7 +86,7 @@ export default {
     },
 
     publicRuntimeConfig: {
-        url: process.env.URL,
+        url: process.env.URL || 'http://localhost:3000',
         deployUrl: process.env.DEPLOY_URL,
         gitBranch: process.env.BRANCH,
         gitCommit: process.env.COMMIT_REF,
