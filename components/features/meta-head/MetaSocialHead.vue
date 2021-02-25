@@ -42,6 +42,12 @@ export default {
                 },
 
                 {
+                    hid: 'twitter:card',
+                    name: 'twitter:card',
+                    content: 'summary_large_image',
+                },
+
+                {
                     hid: 'twitter:image',
                     name: 'twitter:image',
                     content: this.imageUrl,
@@ -51,6 +57,12 @@ export default {
                     hid: 'twitter:image:alt',
                     name: 'twitter:image:alt',
                     content: this.title
+                },
+
+                {
+                    hid: 'twitter:creator',
+                    name: 'twitter:creator',
+                    content: '@lloydjatkinson'
                 },
 
                 {
@@ -81,12 +93,22 @@ export default {
                     hid: 'og:image:alt',
                     property: 'og:image:alt',
                     content: this.title
+                },
+
+                {
+                    hid: 'author',
+                    property: 'author',
+                    content: 'Lloyd Atkinson'
                 }
             ]
         }
     },
 
     computed: {
+        url () {
+            return this.$config.url;
+        },
+
         imageUrl () {
             debugger;
             return this.image === ''
