@@ -1,86 +1,265 @@
 ---
-title: 'Introducing Astro: Ship Less JavaScript'
-description: "We're excited to announce Astro as a new way to build static websites and deliver lightning-fast performance without sacrificing a modern developer experience."
-publishDate: 'Tuesday, June 8 2021'
-author: 'fred'
+title: first post
+description: description
+publishDate: 2021-01-06
 heroImage: '/social.jpg'
 alt: 'Astro'
 layout: '../../layouts/BlogPost.astro'
 ---
 
-There's a simple secret to building a faster website — _just ship less_.
+# First Post
 
-Unfortunately, modern web development has been trending in the opposite direction—towards _more._ More JavaScript, more features, more moving parts, and ultimately more complexity needed to keep it all running smoothly.
+## For testing how markdown files render
 
-Today I'm excited to publicly share Astro: a new kind of static site builder that delivers lightning-fast performance with a modern developer experience. To design Astro, we borrowed the best parts of our favorite tools and then added a few innovations of our own, including:
+### Hello
 
-- **Bring Your Own Framework (BYOF):** Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.
-- **100% Static HTML, No JS:** Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.
-- **On-Demand Components:** Need some JS? Astro can automatically hydrate interactive components when they become visible on the page. If the user never sees it, they never load it.
-- **Fully-Featured:** Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any of your favorite npm packages.
-- **SEO Enabled:** Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication.
+#### World
 
-This post marks the first public beta release of Astro. **Missing features and bugs are still to be expected at this early stage.** There are still some months to go before an official 1.0 release, but there are already several fast sites built with Astro in production today. We would love your early feedback as we move towards a v1.0 release later this year.
+[Markdown Link to Articles](/articles)
 
-> To learn more about Astro and start building your first site, check out [the project README.](https://github.com/snowpackjs/astro#-guides).
+Here's a simple footnote,[^1] and here's a longer one.[^bignote]
 
-## Getting Started
+[^1]: This is the first footnote.
 
-Starting a new project in Astro is easy:
+[^bignote]: Here's one with multiple paragraphs and code.
 
-```shell
-# create your project
-mkdir new-project-directory
-cd new-project-directory
-npm init astro
+    Indent paragraphs to include them in the footnote.
 
-# install your dependencies
-npm install
+    `{ my code }`
 
-# start the dev server and open your browser
-npm run dev
+    Add as many paragraphs as you like.
+
+
+# h1 Heading 8-)
+## h2 Heading
+### h3 Heading
+#### h4 Heading
+##### h5 Heading
+###### h6 Heading
+
+
+## Horizontal Rules
+
+___
+
+---
+
+***
+
+
+## Typographic replacements
+
+Enable typographer option to see result.
+
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-
+
+test.. test... test..... test?..... test!....
+
+!!!!!! ???? ,,  -- ---
+
+"Smartypants, double quotes" and 'single quotes'
+
+
+## Emphasis
+
+**This is bold text**
+
+__This is bold text__
+
+*This is italic text*
+
+_This is italic text_
+
+~~Strikethrough~~
+
+
+## Blockquotes
+
+
+> Blockquotes can also be nested...
+>> ...by using additional greater-than signs right next to each other...
+> > > ...or with spaces between arrows.
+
+
+## Lists
+
+Unordered
+
++ Create a list by starting a line with `+`, `-`, or `*`
++ Sub-lists are made by indenting 2 spaces:
+  - Marker character change forces new list start:
+    * Ac tristique libero volutpat at
+    + Facilisis in pretium nisl aliquet
+    - Nulla volutpat aliquam velit
++ Very easy!
+
+Ordered
+
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa
+
+
+1. You can use sequential numbers...
+1. ...or keep all the numbers as `1.`
+
+Start numbering with offset:
+
+57. foo
+1. bar
+
+
+## Code
+
+Inline `code`
+
+Indented code
+
+    // Some comments
+    line 1 of code
+    line 2 of code
+    line 3 of code
+
+
+Block code "fences"
+
+```
+Sample text here...
 ```
 
-> To learn more about Astro and start building your first site, check out [the project README.](https://github.com/snowpackjs/astro#-guides).
+Syntax highlighting
 
-## How Astro Works
+``` js
+var foo = function (bar) {
+  return bar++;
+};
 
-Astro works a lot like a static site generator. If you have ever used Eleventy, Hugo, or Jekyll (or even a server-side web framework like Rails, Laravel, or Django) then you should feel right at home with Astro.
+console.log(foo(5));
+```
 
-In Astro, you compose your website using UI components from your favorite JavaScript web framework (React, Svelte, Vue, etc). Astro renders your entire site to static HTML during the build. The result is a fully static website with all JavaScript removed from the final page. No monolithic JavaScript application required, just static HTML that loads as fast as possible in the browser regardless of how many UI components you used to generate it.
+## Tables
 
-Of course, sometimes client-side JavaScript is inevitable. Image carousels, shopping carts, and auto-complete search bars are just a few examples of things that require some JavaScript to run in the browser. This is where Astro really shines: When a component needs some JavaScript, Astro only loads that one component (and any dependencies). The rest of your site continues to exist as static, lightweight HTML.
+| Option | Description |
+| ------ | ----------- |
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
 
-In other full-stack web frameworks this level of per-component optimization would be impossible without loading the entire page in JavaScript, delaying interactivity. In Astro, this kind of [partial hydration](https://addyosmani.com/blog/rehydration/) is built into the tool itself.
+Right aligned columns
 
-You can even [automatically defer components](https://codepen.io/jonneal/full/ZELvMvw) to only load once they become visible on the page with the `client:visible` directive.
+| Option | Description |
+| ------:| -----------:|
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
 
-This new approach to web architecture is called [islands architecture](https://jasonformat.com/islands-architecture/). We didn't coin the term, but Astro may have perfected the technique. We are confident that an HTML-first, JavaScript-only-as-needed approach is the best solution for the majority of content-based websites.
 
-> To learn more about Astro and start building your first site, check out [the project README.](https://github.com/snowpackjs/astro#-guides)
+## Links
 
-## Embracing the Pit of Success
+[link text](http://dev.nodeca.com)
 
-> A well-designed system makes it easy to do the right things and annoying (but not impossible) to do the wrong things<div class="source"><p>– Jeff Atwood</p>[Falling Into The Pit of Success](https://blog.codinghorror.com/falling-into-the-pit-of-success/)</div>
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
 
-Poor performance is often framed as a failure of the developer, but we respectfully disagree. In many cases, poor performance is a failure of tooling. It should be difficult to build a slow website.
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
-Astro's main design principle is to lead developers into what [Rico Mariani](https://twitter.com/ricomariani) dubbed "the pit of success". It is our goal to build every site "fast by default" while also delivering a familiar, modern developer experience.
 
-By building your site to static HTML by default, Astro makes it difficult (but never impossible 😉) to build a slow site.
+## Images
 
-## Long-Term Sustainability
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
 
-Astro is built by the team of open source developers behind [Snowpack](https://snowpack.dev) and [Skypack](https://skypack.dev), with additional contributions from the community.
+Like links, Images also have a footnote style syntax
 
-**Astro is and always will be free.** It is an open source project released under the [MIT license](https://github.com/snowpackjs/astro/blob/main/LICENSE).
+![Alt text][id]
 
-We care deeply about building a more sustainable future for open source software. At the same time, we need to support Astro's development long-term. This requires money (donations alone aren't enough.)
+With a reference later in the document defining the URL location:
 
-We're inspired by the early success of projects like [Tailwind](https://tailwindcss.com/), [Rome](https://rome.tools/), [Remix](https://remix.run/), [Ionic](https://ionicframework.com/), and others who are experimenting with long-term financial sustainability on top of Open Source. Over the next year we'll be exploring how we can create a sustainable business to support a 100% free, open source Astro for years to come.
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
 
-If your company is as excited about Astro as we are, [we'd love to hear from you.](https://astro.build/chat)
 
-Finally, I'd like to give a **HUGE** thanks to the 300+ developers who joined our earliest private beta. Your feedback has been essential in shaping Astro into the tool it is today. If you're interested in getting involved (or just following along with development) please [join us on Discord.](https://astro.build/chat)
+## Plugins
 
-> To learn more about Astro and start building your first site, check out [the project README.](https://github.com/snowpackjs/astro#-guides)
+The killer feature of `markdown-it` is very effective support of
+[syntax plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
+
+
+### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
+
+> Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:
+>
+> Shortcuts (emoticons): :-) :-( 8-) ;)
+
+see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
+
+
+### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
+
+- 19^th^
+- H~2~O
+
+
+### [\<ins>](https://github.com/markdown-it/markdown-it-ins)
+
+++Inserted text++
+
+
+### [\<mark>](https://github.com/markdown-it/markdown-it-mark)
+
+==Marked text==
+
+
+### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
+
+Footnote 1 link[^first].
+
+Footnote 2 link[^second].
+
+Inline footnote^[Text of inline footnote] definition.
+
+Duplicated footnote reference[^second].
+
+[^first]: Footnote **can have markup**
+
+    and multiple paragraphs.
+
+[^second]: Footnote text.
+
+
+### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
+
+Term 1
+
+:   Definition 1
+with lazy continuation.
+
+Term 2 with *inline markup*
+
+:   Definition 2
+
+        { some code, part of Definition 2 }
+
+    Third paragraph of definition 2.
+
+_Compact style:_
+
+Term 1
+  ~ Definition 1
+
+Term 2
+  ~ Definition 2a
+  ~ Definition 2b
+
+
+### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
+
+This is HTML abbreviation example.
+
+It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
+
+*[HTML]: Hyper Text Markup Language
+
+### [Custom containers](https://github.com/markdown-it/markdown-it-container)
+
+::: warning
+*here be dragons*
+:::
