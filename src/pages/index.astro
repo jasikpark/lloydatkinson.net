@@ -6,6 +6,8 @@ import BlogPostPreview from '../components/BlogPostPreview.astro';
 
 import Button from '../components/Button.astro';
 
+import BaseLayout from '../components/BaseLayout.astro';
+
 interface MarkdownFrontmatter {
   publishDate: number;
 }
@@ -26,7 +28,30 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
-<html lang="en">
+<BaseLayout title="index.astro" description="some description">
+    <!-- <main class="content">
+        <section class="intro">
+            <h1 class="latest">{title}</h1>
+            <p>{description}</p>
+        </section>
+        <section aria-label="Blog post list">
+            {allPosts.map(p => <BlogPostPreview post={p} />)}
+        </section>
+    </main> -->
+    <div class="z-10">
+        <div class="flex items-center justify-center h-full">
+            <div class="text-center">
+                <h2 class="text-4xl sm:text-6xl">
+                    Hi there, I'm Lloyd
+                </h2>
+                <h3 class="text-3xl text-gray-700 sm:text-5xl">
+                    I make things
+                </h3>
+            </div>
+        </div>
+    </div>
+</BaseLayout>
+<!-- <html lang="en">
   <head>
     <BaseHead title={title} description={description} permalink={permalink} />
   </head>
@@ -46,4 +71,4 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
       </main>
     </div>
   </body>
-</html>
+</html> -->

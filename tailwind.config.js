@@ -19,7 +19,11 @@ module.exports = {
             purple: colors.violet,
             pink: colors.pink,
         },
-        extend: {},
+        extend: {
+            colors: {
+                'red-vibrant': '#ff0000'
+            },
+        },
     },
     variants: {
         extend: {},

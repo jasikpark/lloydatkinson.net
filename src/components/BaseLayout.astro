@@ -13,10 +13,18 @@ const { title, description, image, permalink } = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <BaseHead title={title} description={description} image={image} permalink={permalink} />
+    <BaseHead
+        title={title}
+        description={description}
+        image={image}
+        permalink={permalink} />
 </head>
 <body>
-    <BlogHeader />
-    <slot />
+    <div class="container max-w-4xl px-4 mx-auto">
+        <BlogHeader />
+        <main class="py-8 sm:py-16 sm:px-12">
+            <slot />
+        </main>
+    </div>
 </body>
 </html>
