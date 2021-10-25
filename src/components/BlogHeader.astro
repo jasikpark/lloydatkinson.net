@@ -1,3 +1,6 @@
+---
+import NavigationLink from './NavigationLink';
+---
 <header>
     <nav>
         <div class="border-b select-none border-red-vibrant">
@@ -11,28 +14,31 @@
                         </a>
                     </div>
                 </div>
-                <div class="hidden space-x-10 sm:ml-6 sm:flex sm:items-center">
-                    <ul class="items-center hidden text-sm font-medium sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
+                <div class="hidden space-x-10 sm:flex sm:items-center">
+                    <ul class="items-center hidden text-sm font-medium sm:-my-px sm:flex sm:space-x-8">
                         <li>
-                            <a
+                            <!-- <a
                                 href="/articles"
                                 class="inline-block text-gray-600 cursor-pointer hover:text-gray-900">
                                 Articles
-                            </a>
+                            </a> -->
+                            <NavigationLink to="/articles">Articles</NavigationLink>
                         </li>
                         <li>
-                            <a
+                            <!-- <a
                                 href="/projects"
                                 class="inline-block text-gray-600 cursor-pointer hover:text-gray-900">
                                 Projects
-                            </a>
+                            </a> -->
+                            <NavigationLink to="/projects">Projects</NavigationLink>
                         </li>
                         <li>
-                            <a
+                            <!-- <a
                                 href="/about"
                                 class="inline-block text-black cursor-pointer hover:text-gray-900">
                                 About
-                            </a>
+                            </a> -->
+                            <NavigationLink to="/about">About</NavigationLink>
                         </li>
                     </ul>
                     <div class="flex space-x-4">
@@ -43,7 +49,7 @@
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
-                                class="w-6 h-6 text-gray-700 cursor-pointer hover:text-red-600">
+                                class="w-6 h-6 text-gray-700 cursor-pointer hover:text-red-500">
                                 <path
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
@@ -64,7 +70,7 @@
                                 fill="none"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
-                                class="w-6 h-6 text-gray-700">
+                                class="w-6 h-6 text-gray-700 hover:text-red-500">
                                 <path
                                     stroke="none"
                                     d="M0 0h24v24H0z" />
