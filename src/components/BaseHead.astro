@@ -16,23 +16,27 @@ const { title, description, image = 'https://i.imgur.com/ZXzEafL.jpg', permalink
 <link rel="stylesheet" type="text/css" href={Astro.resolve("../styles/global.css")}>
 <link rel="sitemap" href="/sitemap.xml"/>
 
+<!-- Analytics -->
+<script defer data-domain="yourdomain.com" src="https://plausible.io/js/plausible.js"></script>
+
 <!-- Primary Meta Tags -->
 <title>{title} - Lloyd Atkinson</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
 <meta property="og:url" content={permalink} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
+<meta property="og:type" content="website" />
 <meta property="og:image" content={image} />
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={permalink} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
+<meta property="twitter:creator" content="@lloydjatkinson" />
+<meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content={image} />
 
 <!-- Fonts -->

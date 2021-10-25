@@ -8,8 +8,6 @@ const { to } = Astro.props;
 
 const currentUrl = Astro.request.url;
 
-console.log({ currentUrl: currentUrl.pathname, to });
-
 const classes = clsx(
     'hover:text-gray-900',
     {
