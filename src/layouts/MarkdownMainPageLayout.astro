@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const { content } = Astro.props;
+const { title, description, image, permalink } = content;
+---
+
+<BaseLayout
+    title={title}
+    description={description}
+    image={image}
+    permalink={permalink}>
+    <div class="prose">
+        <slot />
+    </div>
+</BaseLayout>

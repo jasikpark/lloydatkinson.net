@@ -11,8 +11,8 @@ const currentUrl = Astro.request.url;
 const classes = clsx(
     'hover:text-gray-900',
     {
-        'text-gray-500': currentUrl.pathname !== to,
-        'text-gray-900 font-semibold': currentUrl.pathname === to,
+        'text-gray-500': !currentUrl.pathname.startsWith(to),
+        'text-gray-900 font-semibold': currentUrl.pathname.startsWith(to),
     });
 ---
 <a href={to} class={classes}>
