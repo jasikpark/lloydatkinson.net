@@ -8,9 +8,7 @@ alt: 'Astro'
 layout: '../layouts/MarkdownMainPageLayout.astro'
 ---
 
-Hi, I'm Lloyd.
-
-I'm a software developer. I'm interested in a number of subject areas, including software development, embedded systems, and electronics. I'm active in the online developer community and like to help others.
+Hey, I'm Lloyd. I'm a software developer. I'm interested in a number of subject areas, including software development, embedded systems, and electronics. I'm active in the online developer community and like to help others.
 
 I advocate for making and designing software well. Clean code, unit testing, maintainable and extensible code.
 
@@ -21,7 +19,7 @@ I made this site with [Astro](https://astro.build/) and [Vue](https://vuejs.org/
 ---
 
 <p style="font-size: 2rem; text-align: center">
-🌲🏞️🌃🌳🌻🌊👌
+    🌲🏞️🌃🌳🌻🌊👌
 </p>
 
 ---

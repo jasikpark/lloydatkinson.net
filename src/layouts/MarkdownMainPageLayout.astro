@@ -10,7 +10,10 @@ const { title, description, image, permalink } = content;
     description={description}
     image={image}
     permalink={permalink}>
-    <div class="prose">
+    <h2 class="mb-8 text-center text-[30px] leading-[45px] font-medium">
+        {title}
+    </h2>
+    <div class="prose max-w-none">
         <slot />
     </div>
 </BaseLayout>
