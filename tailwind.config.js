@@ -46,6 +46,8 @@ module.exports = {
             colors: {
                 'red-vibrant': '#ff0000'
             },
+            fontSize: {
+            }
         },
     },
     variants: {
