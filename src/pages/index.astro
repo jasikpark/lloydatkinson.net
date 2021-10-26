@@ -28,7 +28,6 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
-<BaseLayout title="index.astro" description="some description">
     <!-- <main class="content">
         <section class="intro">
             <h1 class="latest">{title}</h1>
@@ -38,6 +37,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
             {allPosts.map(p => <BlogPostPreview post={p} />)}
         </section>
     </main> -->
+<BaseLayout title="Software Developer and Maker" description="some description">
     <div class="relative">
       <div class="z-10 h-[30rem]">
           <div class="flex items-center justify-center h-full">
