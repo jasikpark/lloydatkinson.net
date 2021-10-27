@@ -2,7 +2,6 @@
 title: 'About'
 description: 'Lloyd Atkinson - Software Developer and Maker'
 publishDate: 2021-10-26T02:44:43Z
-author: 'fred'
 heroImage: '/social.jpg'
 alt: 'Astro'
 layout: '../layouts/MarkdownMainPageLayout.astro'
@@ -18,7 +17,7 @@ I made this site with [Astro](https://astro.build/) and [Vue](https://vuejs.org/
 
 ---
 
-<p style="font-size: 2rem; text-align: center">
+<p style="font-size: 1.5rem; text-align: center">
     🌲🏞️🌃🌳🌻🌊👌
 </p>
 
