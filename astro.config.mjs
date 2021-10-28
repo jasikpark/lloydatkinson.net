@@ -8,7 +8,7 @@
 
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
-    renderers: ['@astrojs/renderer-vue'],
+    
     devOptions: {
         tailwindConfig: './tailwind.config.js',
     },

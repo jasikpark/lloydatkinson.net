@@ -34,17 +34,7 @@ const {
             categories={categories}
             openGraphType={openGraphType} />
     </head>
-    <body>
-        <div class="container max-w-4xl px-4 mx-auto">
-            <BlogHeader />
-            <div class="py-8 sm:py-16 sm:px-12">
-                <main class="">
-                    <slot />
-                </main>
-                <footer class="flex items-center justify-center mb-4 mt-52">
-                    <p class="text-sm font-bold text-center text-gray-500">© Lloyd Atkinson {new Date().getFullYear()}</p>
-                </footer>
-            </div>
-        </div>
+    <body class="prose">
+        <slot/>
     </body>
 </html>

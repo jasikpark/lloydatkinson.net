@@ -1,28 +1,12 @@
 ---
-import Debug from 'astro/debug';
+import {Code} from 'astro/components';
 
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { Markdown } from 'astro/components';
-import BaseHead from '../components/BaseHead.astro';
-import BlogHeader from '../components/BlogHeader.astro';
-import BlogPost from '../components/BlogPost.astro';
 
 const { content } = Astro.props;
-// const { title, description, publishDate, author, heroImage, permalink, alt } = content;
 const { title, description, image, imageDescription, publishDate, modifiedDate, categories } = content;
 ---
-<!-- <html lang={ content.lang || 'en' }>
-  <head>
-    <BaseHead title={title} description={description} permalink={permalink} />
-  </head>
 
-  <body>
-    <BlogHeader />
-    <BlogPost title={title} author={author} heroImage={heroImage} publishDate={publishDate} alt={alt}>
-      <slot />
-    </BlogPost>
-  </body>
-</html> -->
 <BaseLayout
     title={title}
     description={description}
@@ -32,7 +16,7 @@ const { title, description, image, imageDescription, publishDate, modifiedDate, 
     modifiedDate={modifiedDate}
     categories={categories}
     openGraphType="article">
-    <Debug {content} />
+    <Code lang="json" code={JSON.stringify(content, null, 2)}/>
     <slot />
     {image && <img loading="lazy" src={image} alt={imageDescription} />}
 </BaseLayout>
