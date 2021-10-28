@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Not Found" description="Not Found">
+    <div class="flex justify-center">
+        <img
+            class="rounded-md"
+            src={Astro.resolve('/assets/images/404.jpg')}>
+    </div>
+</BaseLayout>

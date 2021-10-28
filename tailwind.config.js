@@ -1,51 +1,60 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+    mode: 'jit',
+    purge: ['./public/**/*.html', './src/**/*.{astro,js,jsx,svelte,ts,tsx,vue}'],
+    darkMode: false, // or 'media' or 'class'
     theme: {
         fontFamily: {
             'sans': ['"Inter"', ...defaultTheme.fontFamily.sans],
             'serif': [...defaultTheme.fontFamily.serif],
             'mono': [...defaultTheme.fontFamily.mono]
         },
+        colors: {
+            transparent: 'transparent',
+            current: 'currentColor',
+
+            rose: colors.rose,
+            pink: colors.pink,
+            fuchsia: colors.fuchsia,
+            purple: colors.purple,
+            violet: colors.violet,
+            indigo: colors.indigo,
+            blue: colors.blue,
+            lightBlue: colors.lightBlue,
+            sky: colors.sky,
+            cyan: colors.cyan,
+            teal: colors.teal,
+            emerald: colors.emerald,
+            green: colors.green,
+            lime: colors.lime,
+            yellow: colors.yellow,
+            amber: colors.amber,
+            orange: colors.orange,
+            red: colors.red,
+            warmGray: colors.warmGray,
+            trueGray: colors.trueGray,
+            gray: colors.gray,
+            coolGray: colors.coolGray,
+            blueGray: colors.blueGray,
+            black: colors.black,
+            white: colors.white,
+            gray: colors.coolGray,
+        },
         extend: {
             colors: {
                 'red-vibrant': '#ff0000'
             },
-            spacing: {
-                'box-tall': '30rem',
-            },
+            fontSize: {
+            }
         },
     },
     variants: {
-        boxShadow: ['responsive', 'hover', 'focus', 'active'],
-        backgroundColor: ['responsive', 'hover', 'focus', 'active', 'disabled'],
+        extend: {},
     },
     plugins: [
-        require('@tailwindcss/forms'),
         require('@tailwindcss/typography'),
+        require('@tailwindcss/forms'),
     ],
-    // purge: {
-    //     // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
-    //     enabled: !dev,
-    //     content: [
-    //         `${srcDir}/components/**/*.{vue,js}`,
-    //         `${srcDir}/layouts/**/*.vue`,
-    //         `${srcDir}/pages/**/*.vue`,
-    //         `${srcDir}/plugins/**/*.{js,ts}`,
-    //         `${rootDir}/nuxt.config.{js,ts}`
-    //     ]
-    // }
-    purge: {
-        enabled: process.env.NODE_ENV === 'production',
-        content: [
-            'components/**/*.{vue,js}',
-            'layouts/**/*.{vue,js}',
-            'pages/**/*.{vue,js}',
-            'plugins/**/*.js',
-            'nuxt.config.js',
-            // TypeScript
-            'plugins/**/*.ts',
-            'nuxt.config.ts'
-        ]
-    }
 };
