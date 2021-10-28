@@ -1,6 +1,25 @@
 ---
-import NavigationLink from './NavigationLink';
+import NavigationLink from './NavigationLink.astro';
 ---
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleClass = (element, className) => element.classList.toggle(className);
+
+    const menu = document.querySelector('#navigation-menu');
+    const toggleMenuButton = document.querySelector('#toggle-navigation-menu');
+    const closeIcon = document.querySelector('#navigation-menu-close-icon');
+    const openIcon = document.querySelector('#navigation-menu-open-icon');
+
+    toggleMenuButton.addEventListener('click', (event) => {
+        toggleClass(menu, 'hidden');
+        toggleClass(menu, 'block');
+
+        toggleClass(closeIcon, 'hidden');
+        toggleClass(openIcon, 'hidden');
+    });
+});
+</script>
+
 <header>
     <nav>
         <div class="border-b select-none border-red-vibrant">
@@ -17,27 +36,12 @@ import NavigationLink from './NavigationLink';
                 <div class="hidden space-x-10 sm:flex sm:items-center">
                     <ul class="items-center hidden text-sm font-medium sm:-my-px sm:flex sm:space-x-8">
                         <li>
-                            <!-- <a
-                                href="/articles"
-                                class="inline-block text-gray-600 cursor-pointer hover:text-gray-900">
-                                Articles
-                            </a> -->
                             <NavigationLink to="/articles">Articles</NavigationLink>
                         </li>
                         <li>
-                            <!-- <a
-                                href="/projects"
-                                class="inline-block text-gray-600 cursor-pointer hover:text-gray-900">
-                                Projects
-                            </a> -->
                             <NavigationLink to="/projects">Projects</NavigationLink>
                         </li>
                         <li>
-                            <!-- <a
-                                href="/about"
-                                class="inline-block text-black cursor-pointer hover:text-gray-900">
-                                About
-                            </a> -->
                             <NavigationLink to="/about">About</NavigationLink>
                         </li>
                     </ul>
@@ -80,38 +84,41 @@ import NavigationLink from './NavigationLink';
                     </div>
                 </div>
                 <div class="flex items-center -mr-2 sm:hidden">
-                    <button type="button" class="text-gray-400 bg-white hover:text-gray-500 focus:outline-none">
+                    <button id="toggle-navigation-menu" type="button" class="text-gray-400 bg-white hover:text-gray-500 focus:outline-none">
                         <span class="sr-only">Close</span>
                         <!-- Heroicon name: outline/x -->
-                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <svg id="navigation-menu-close-icon" class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        <svg
+                            id="navigation-menu-open-icon"
+                            class="w-6 h-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                 </div>
             </div>
         </div>
-        <div class="hidden py-4 border-b select-none sm:hidden border-red-vibrant">
+        <!-- this one -->
+        <div id="navigation-menu" class="hidden py-4 border-b select-none sm:hidden border-red-vibrant">
             <div class="space-y-6">
                 <div class="flex justify-center">
                     <ul class="space-y-3 text-sm font-medium text-center">
                         <li>
-                            <a
-                                href="/articles"
-                                class="inline-block text-gray-600 cursor-pointer hover:text-gray-900">
-                                Articles
-                            </a>
-                        </li> <li>
-                            <a
-                                href="/projects"
-                                class="inline-block text-gray-600 cursor-pointer hover:text-gray-900">
-                                Projects
-                            </a>
-                        </li> <li>
-                            <a
-                                href="/about"
-                                class="inline-block text-black cursor-pointer hover:text-gray-900">
-                                About
-                            </a>
+                            <NavigationLink to="/articles">Articles</NavigationLink>
+                        </li>
+                        <li>
+                            <NavigationLink to="/projects">Projects</NavigationLink>
+                        </li>
+                        <li>
+                            <NavigationLink to="/about">About</NavigationLink>
                         </li>
                     </ul>
                 </div>
