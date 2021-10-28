@@ -7,7 +7,6 @@ export interface Props {
     modifiedDate?: Date;
     categories?: []
     openGraphType?: 'website' | 'article';
-    permalink?: string;
 };
 const {
     title,
@@ -17,10 +16,10 @@ const {
     modifiedDate,
     categories,
     openGraphType = 'website',
-    permalink = Astro.site.pathname
 } = Astro.props;
 
 const me = 'Lloyd Atkinson';
+const permalink = Astro.request.canonicalURL;
 ---
 
 <!-- Global Metadata -->

@@ -3,13 +3,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const { content } = Astro.props;
 const { title, description, image, permalink } = content;
+
+console.log(Astro.request)
 ---
 
 <BaseLayout
     title={title}
     description={description}
     image={image}
-    permalink={permalink}>
+    openGraphType="website">
     <h1 class="mb-8 text-center text-[30px] leading-[45px] font-bold">
         {title}
     </h1>

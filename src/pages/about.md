@@ -1,6 +1,6 @@
 ---
 title: 'About'
-description: 'Lloyd Atkinson - Software Developer and Maker'
+description: 'About'
 publishDate: 2021-10-26T02:44:43Z
 heroImage: '/social.jpg'
 alt: 'Astro'
