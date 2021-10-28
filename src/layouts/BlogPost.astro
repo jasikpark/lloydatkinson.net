@@ -9,7 +9,7 @@ import BlogPost from '../components/BlogPost.astro';
 
 const { content } = Astro.props;
 // const { title, description, publishDate, author, heroImage, permalink, alt } = content;
-const { title, description, image, imageDescription, publishDate, modifiedDate, categories, permalink } = content;
+const { title, description, image, imageDescription, publishDate, modifiedDate, categories } = content;
 ---
 <!-- <html lang={ content.lang || 'en' }>
   <head>
@@ -31,7 +31,8 @@ const { title, description, image, imageDescription, publishDate, modifiedDate, 
     publishDate={publishDate}
     modifiedDate={modifiedDate}
     categories={categories}
-    openGraphType="article"
-    permalink={permalink}>
+    openGraphType="article">
     <Debug {content} />
+    <slot />
+    {image && <img loading="lazy" src={image} alt={imageDescription} />}
 </BaseLayout>
