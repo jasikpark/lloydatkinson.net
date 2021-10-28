@@ -6,9 +6,23 @@ export interface Props {
     title: string;
     description: string;
     image?: string;
+    imageDescription?: string;
+    publishDate?: Date;
+    modifiedDate?: Date;
+    categories?: []
+    openGraphType: 'website' | 'article';
     permalink?: string;
 };
-const { title, description, image, permalink } = Astro.props;
+const {
+    title,
+    description,
+    image,
+    publishDate,
+    modifiedDate,
+    categories,
+    openGraphType,
+    permalink = Astro.site.pathname
+} = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +31,10 @@ const { title, description, image, permalink } = Astro.props;
             title={title}
             description={description}
             image={image}
+            publishDate={publishDate}
+            modifiedDate={modifiedDate}
+            categories={categories}
+            openGraphType={openGraphType}
             permalink={permalink} />
     </head>
     <body>

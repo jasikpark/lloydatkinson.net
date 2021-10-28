@@ -1,13 +1,17 @@
 ---
+import Debug from 'astro/debug';
+
+import BaseLayout from '../layouts/BaseLayout.astro';
 import { Markdown } from 'astro/components';
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import BlogPost from '../components/BlogPost.astro';
 
 const { content } = Astro.props;
-const { title, description, publishDate, author, heroImage, permalink, alt } = content;
+// const { title, description, publishDate, author, heroImage, permalink, alt } = content;
+const { title, description, image, imageDescription, publishDate, modifiedDate, categories, permalink } = content;
 ---
-<html lang={ content.lang || 'en' }>
+<!-- <html lang={ content.lang || 'en' }>
   <head>
     <BaseHead title={title} description={description} permalink={permalink} />
   </head>
@@ -18,4 +22,16 @@ const { title, description, publishDate, author, heroImage, permalink, alt } = c
       <slot />
     </BlogPost>
   </body>
-</html>
+</html> -->
+<BaseLayout
+    title={title}
+    description={description}
+    image={image}
+    imageDescription={imageDescription}
+    publishDate={publishDate}
+    modifiedDate={modifiedDate}
+    categories={categories}
+    openGraphType="article"
+    permalink={permalink}>
+    <Debug {content} />
+</BaseLayout>

@@ -6,7 +6,7 @@ heroImage: '/social.jpg'
 alt: 'Astro'
 layout: '../layouts/MarkdownMainPageLayout.astro'
 ---
-test
+
 Hey, I'm Lloyd. I'm a software developer. I'm interested in a number of subject areas, including software development, embedded systems, and electronics. I'm active in the online developer community and like to help others.
 
 I advocate for making and designing software well. Clean code, unit testing, maintainable and extensible code.
